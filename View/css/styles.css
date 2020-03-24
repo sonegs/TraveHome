@@ -1,0 +1,15 @@
+html,
+body {
+    height: 100%;
+}
+
+header {
+    background: red;
+    width: 100%;
+    border: red;
+    color: white;
+}
+
+#encabezado {
+    display: inline-block;
+}
