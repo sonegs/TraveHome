@@ -9,23 +9,12 @@
 
 <?php
 
-session_start();
-include "Model/consultas/consultas_viajeros.php";  
-include "Model/consultas/consultas_propietarios.php";
-//action="../Model/consultas/consultas_viajeros.php"
+include "Model/queries/queries_users.php";  
 
 if(isset($_POST['submit'])){
-    
-    if(isset($_SESSION['traveller'])){
-                             
-        eliminarViajeros();
         
-    }
-    if(isset($_SESSION['owner'])){
-        
-        eliminarPropietarios();
-
-    }  
+    deleteUser(); 
 
 }
+
 ?>

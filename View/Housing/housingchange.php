@@ -7,6 +7,7 @@
             <h5>Dirección</h5><input type="text" name="direccion" value="" class="input_form" required><br><br>
             <h5>Código postal</h5><input type="number" name="cp" value="" class="input_form" maxlength="6" required><br><br>
             <input type="hidden" name="MAX_FILE_SIZE" value="200000" />
+            <input type="number" name="idHouse" value="<?php echo $_POST['idHouse']?>" class="input_form" hidden>
             <input name="uploadedfile" type="file" multiple accept="image/png, image/gif, image/jpeg, image/jpg" required/>
             <input type="submit" name="submit" value="Añadir" class="input_form">
             <input type="reset" name="reset" value="Cancelar" class="input_form">
@@ -18,8 +19,8 @@
     
             if(isset($_POST['submit'])){
                 
-                include "Model/consultas/consultas_viviendas.php";
-                editarVivienda('nombre', 'direccion', 'cp', 'uploadedfile');
+                include "Model/queries/queries_housing.php";
+                editHousing();
                 
             }
             

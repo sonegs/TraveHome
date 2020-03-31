@@ -12,52 +12,41 @@
             <h5>País</h5><input type="text" name="pais" value="España" class="input_form" required><br><br>
             
             
+            <?php
 
-            <?php
             if(isset($_SESSION['traveller'])){
-             ?>                       
-                <a href="index.php?tr=%207" class="button">¿Desea eliminar su cuenta? </a>
+
+            ?>                       
+                <a href="index.php?tr=%207" class="button">¿Desea eliminar su cuenta? </a>  
             <?php
+            
             }
+
             if(isset($_SESSION['owner'])){
+
             ?>  
-                <a href="index.php?ow=%207" class="button">¿Desea eliminar su cuenta? </a>
+                <a href="index.php?ow=%208" class="button">¿Desea eliminar su cuenta? </a>
             <?php
+            
             } 
             ?>
+            <a href="index.php?ow=%200" class="button">Volver </a><br>
             <input type="submit" name="submit" value="Modificar" class="input_form">
-            <a href="index.php?ow=%200" class="button">Volver </a>
-
-
-
-
             <?php
 
                 session_start();
-                include "Model/consultas/consultas_viajeros.php";
-                include "Model/consultas/consultas_propietarios.php";
-                
-                if(isset($_POST['submit'])){
-                    if(isset($_POST['contrasena'])){
-                        if(isset($_POST['contrasena2'])){
-                            if(($_POST['contrasena']) == ($_POST['contrasena2'])){
+                include "Model/queries/queries_users.php";
 
-                                if(isset($_SESSION['traveller'])){
-                                    
-                                    editarViajeros('dni','telefono', 'email', 'contrasena', 'direccion', 'cp', 'ciudad', 'pais');
-                
-                                }
-                                if(isset($_SESSION['owner'])){
-                                        
-                                    editarPropietarios('dni','telefono', 'email', 'contrasena', 'direccion', 'cp', 'ciudad', 'pais');
-                
-                                }                
+                if(isset($_POST['submit'])){
+                    
+                    if(isset($_POST['contrasena']) && isset($_POST['contrasena2']) && ($_POST['contrasena']) == ($_POST['contrasena2'])){    
+              
+                        editUser('dni','telefono', 'email', 'contrasena', 'direccion', 'cp', 'ciudad', 'pais');
+                                              
                 }  else {
 
                     echo "<h3>No coinciden las contraseñas!!</h3>";
 
-                }
-            }
         }
     }
             ?>

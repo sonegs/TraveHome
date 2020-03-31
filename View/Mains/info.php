@@ -1,24 +1,9 @@
-<section class="info">
+<section class="principal">
     <div class="comienzo">
-        <div class="seguimos">INFasdprueba info asdO</div>
+        <div class="seguimos">QUE ES TRAVEHOME, COMO FUNCIONA ETC</div>
     </div>
     <div class="comienzo">
         <div class="seguimos">FOTO</div>
     </div>
-</section>
-<section class="info">
-    <div class="comienzo">
-        <div class="seguimos">INFO</div>
-    </div>
-    <div class="comienzo">
-        <div class="seguimos">FOTO</div>
-    </div>
-</section>
-<section class="info">
-    <div class="comienzo">
-        <div class="seguimos">INFO</div>
-    </div>
-    <div class="comienzo">
-        <div class="seguimos">FOTO</div>
-    </div>
+
 </section>

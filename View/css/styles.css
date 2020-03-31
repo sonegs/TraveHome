@@ -1,15 +1,116 @@
+/*CSS GLOBAL */
+
 html,
 body {
     height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
 header {
-    background: red;
-    width: 100%;
+    background: -webkit-linear-gradient(90deg, rgb(0, 140, 255) 10%, rgb(40, 51, 202) 90%);
+    background: -moz-linear-gradient(90deg, rgb(0, 140, 255) 10%, rgb(40, 51, 202) 90%);
+    background: -ms-linear-gradient(90deg, rgb(0, 140, 255) 10%, rgb(40, 51, 202) 90%);
+    background: -o-linear-gradient(90deg, rgb(0, 140, 255) 10%, rgb(40, 51, 202) 90%);
+    background: linear-gradient(90deg, rgb(0, 140, 255) 10%, rgb(40, 51, 202) 90%);
     border: red;
     color: white;
 }
 
-#encabezado {
-    display: inline-block;
+header,
+.filaheader {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.filaheader {
+    height: auto;
+}
+
+
+/* TELEFONOS MOVILES */
+
+@media screen and (max-width:479px) {
+    .view-viewport {
+        height: 100%;
+    }
+    /* HEADER */
+    header {
+        height: 5%;
+    }
+    header button {
+        display: none;
+    }
+    .logo {
+        height: 25%;
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33333333%;
+        float: left;
+    }
+    /* PAGINA PRINCIPAL */
+    .col-12 {
+        margin: 1rem;
+        padding: 1rem;
+        /* IMPORTANTE */
+        text-align: center;
+        margin: calc(40vh - .5em) auto;
+    }
+    .principal {
+        border: 2px solid #ccc;
+        height: 94%
+    }
+}
+
+
+/*-- ESTILOS PARA LA VALORACIÓN EN ESTRELLAS --*/
+
+.comment {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+}
+
+.comment p {
+    text-align: center;
+}
+
+.comment label {
+    font-size: 20px;
+}
+
+.comment input[type="radio"] {
+    display: none;
+}
+
+.comment label {
+    color: grey;
+}
+
+.clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+.comment label:hover,
+.comment label:hover~label {
+    color: orange;
+}
+
+.comment input[type="radio"]:checked~label {
+    color: orange;
+}
+
+
+/*-- ESTILOS PARA EL CUADRO DE ENVIAR COMENTARIO --*/
+
+#comentario {
+    height: 13rem;
+    width: 40rem;
 }

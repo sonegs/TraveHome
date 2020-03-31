@@ -15,9 +15,10 @@
 		1 =>	'¿QUÉ ES TRAVEHOME?',
 		2 =>	'AÑADIR VIVIENDA',
 		3 =>	'VER TUS VIVIENDAS',
-		4 =>	'CONFIGURACIÓN',
-		5 =>	'CONTACTO',
-		6 =>	'CERRAR SESION'
+		4 =>	'VER RESERVAS',
+		5 =>	'CONFIGURACIÓN',
+		6 =>	'CONTACTO',
+		7 =>	'CERRAR SESION'
 	);	
 
 	$menuNoUser = array(
@@ -37,7 +38,7 @@
 
 if(isset($_SESSION['traveller'])):
 
-	echo $_SESSION['traveller']['Name'].$_SESSION['traveller']['Email'].'<br>';
+	echo "User: ".$_SESSION['traveller']['Name']."<br>".$_SESSION['traveller']['Email'].'<br>';
 		for($i = 0; $i < count($menuTraveller); $i++) { 
 
 			?>
@@ -53,7 +54,7 @@ endif;
 
 if(isset($_SESSION['owner'])):
 
-	echo $_SESSION['owner']['Name'].' '.$_SESSION['owner']['Email'].'<br>';
+	echo "User: ".$_SESSION['owner']['Name']."<br>".$_SESSION['owner']['Email'].'<br>';
 		for($i = 0; $i < count($menuOwner); $i++) { 
 
 			?>
@@ -85,8 +86,16 @@ if(!isset($_SESSION['traveller']) && !isset($_SESSION['owner'])):
 endif;	
 		
 		?>
-        <div class="encabezado">
-		<h1 class="title">TraveHome</h1>
-		<img class="logo" src="View/src/logo.png" alt="" width="72" height="72">
-		</div>
+			<div class="filaheader">
+				<div class="col-4">
+					TraveHome
+				</div>
+				<div class="col-4">
+					<img class="logo" src="View/src/logo.png">
+				</div>
+				<div class="col-4">
+					prueba
+				</div>
+			</div>
+		
 </header>

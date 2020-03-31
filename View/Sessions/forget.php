@@ -1,4 +1,3 @@
-
 <section>
     <form class="form-signin" action="" method="POST" name="form_usuario">
         <h3>Escriba su dirección de correo electrónico</h3>
@@ -6,31 +5,17 @@
         <input type="radio" name="usertype" value="traveller"> Soy un traveller
         <input type="radio" name="usertype" value="owner"> Soy un anfitrión<br>
         <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Enviar</button>
-        
+        <a href="index.php" class="button">Volver</a>
     </form>
 </section>
+
 <?php
-              
                 
-                $usertype = "";
-                
-                if(isset($_POST['submit'])){
+    if(isset($_POST['submit'])){
 
-                    $usertype = $_POST['usertype'];
-                    
-                    if($usertype == 'traveller'){
-                        
-                        include "Model/consultas/consultas_viajeros.php";
-                        forgetViajeros(); 
+            include "Model/queries/queries_users.php";
+            forgetUser(); 
 
-                    }
+    }
 
-                    if ($usertype == 'owner') {
-                        include "Model/consultas/consultas_propietarios.php";
-                        forgetPropietarios();
-                    
-                    } 
-                    
-                }
-
-            ?>
+?>

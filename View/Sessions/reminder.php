@@ -13,8 +13,6 @@
 </section>
 <?php
 
-$usertype = $_POST['usertype'];
-
 if(isset($_POST['submit'])){
 
     if(isset($_POST['contrasena'])){
@@ -22,28 +20,17 @@ if(isset($_POST['submit'])){
         if(isset($_POST['contrasena2'])){
 
             if(($_POST['contrasena']) == ($_POST['contrasena2'])){
+   
+                include "Model/queries/queries_users.php";
+                reminderUser('email', 'contrasena'); 
 
-                if($usertype == 'traveller'){
-                        
-                    include "Model/consultas/consultas_viajeros.php";
-                    reminderViajeros('email', 'contrasena'); 
+            } else {
 
-                }
-
-                if ($usertype == 'owner') {
-                    
-                    include "Model/consultas/consultas_propietarios.php";
-                    reminderPropietarios('email', 'contrasena');
-                    
-                } 
-
-            }  else {
-
-            echo "<h3>No coinciden las contraseñas!!</h3>";
+                echo "<h3>No coinciden las contraseñas!!</h3>";
 
             }
         }
     }
 }
 
-            ?>
+?>

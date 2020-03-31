@@ -4,12 +4,13 @@
             <img class="mb-4" src="src/logo.png" alt="" width="172" height="172">
             <h1 class="h3 mb-3 font-weight-normal">Añade tu vivienda</h1>
             <h5>Nombre</h5><input type="text" name="nombre" maxlength="30" value="" class="input_form" required ><br><br>
+            <h5>Características de la vivienda: </h5><input type="text" id="descripcion" name="descripcion"><br>
             <h5>Dirección</h5><input type="text" name="direccion" value="" class="input_form" required><br><br>
             <h5>Código postal</h5><input type="number" name="cp" value="" class="input_form" maxlength="6" required><br><br>
             <h5>Ciudad</h5><input type="text" name="ciudad" value="" class="input_form" required><br><br>
             <h5>País</h5><input type="text" name="pais" value="España" class="input_form" required><br><br>
             <input type="hidden" name="MAX_FILE_SIZE" value="200000" />
-            <input name="uploadedfile" type="file" multiple accept="image/png, image/gif, image/jpeg, image/jpg" required/>
+            <input name="uploadedfile" type="file" multiple accept="image/png, image/jpeg, image/jpg" required/>
     
             <input type="submit" name="submit" value="Añadir" class="input_form">
             <input type="reset" name="reset" value="Cancelar" class="input_form">
@@ -21,8 +22,8 @@
     
             if(isset($_POST['submit'])){
                 
-                include "Model/consultas/consultas_viviendas.php";
-                insertarVivienda();
+                include "Model/queries/queries_housing.php";
+                insertHousing();
                 
             }
             
