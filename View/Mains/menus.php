@@ -10,13 +10,22 @@ include "View/Mains/header.php";
 		switch ( $_GET['nu'] ) {
 
 		case '0':
-			include "View/Sessions/signup.php";
+			header('Location: index.php');
 			break;
 		case '1':
-			include "View/Sessions/forget.php";
+			include "View/Mains/cities.php";
 			break;
 		case '2':
 			include "View/Sessions/login.php";
+			break;
+		case '3':
+			include "View/Sessions/signup.php";
+			break;
+		case '4':
+			include "View/Sessions/forget.php";
+			break;
+		default:
+			header('Location: index.php');
 			break;
 			}
 		}
@@ -29,7 +38,7 @@ elseif(isset($_SESSION['traveller'])){
 		switch ( $_GET['tr'] ) {
 	
 		case '0':
-			include "View/Mains/main.php";
+			include "View/Mains/menu_user.php";
 			break;
 		case '1':
 			include "View/Mains/info.php";
@@ -62,7 +71,7 @@ elseif(isset($_SESSION['traveller'])){
 			include "View/Booking/comments.php";
 			break;
 		default:
-			include "View/Mains/main.php";
+			include "View/Mains/menu_user.php";
 			break;
 									
 		}
@@ -77,7 +86,7 @@ elseif(isset($_SESSION['owner'])){
 	switch ( $_GET['ow'] ) {
 	
 		case '0':
-			include "View/Mains/main.php";
+			include "View/Mains/menu_user.php";
 			break;
 		case '1':
 			include "View/Mains/info.php";
@@ -113,7 +122,7 @@ elseif(isset($_SESSION['owner'])){
 			include "View/Housing/deletehousing.php";
 			break;
 		default:
-			include "View/Mains/main.php";
+			include "View/Mains/menu_user.php";
 			break;
 									
 		}
@@ -123,6 +132,7 @@ elseif(isset($_SESSION['owner'])){
 
 	include "View/Mains/main.php";
 	include "View/Mains/info.php";
+	include "View/Mains/info2.php";
 	include "View/Mains/cities.php";
 	include "View/Sessions/login.php";
 	include "View/Mains/contact.php";

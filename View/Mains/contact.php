@@ -1,10 +1,19 @@
-<section class="principal">
-    <div class="comienzo">
-        <div class="seguimos">INFORMACION SOBRE COMO CONTACTAR CON LA EMPRESA</div>
+<section class="contact">
+    <div class="fila-footer">
+        <div class="col-4">
+            <a href="tel:+34678567876" class="contact-info">Teléfono de atención al cliente</a>
+        </div>
+        <div class="col-4">
+            <p class="footer">TraveHome S.L.</p>
+        </div>
+        <div class="col-4">
+            <a href="mailto:contact@travehome.com" class="contact-info">¿Tienes algunda duda? Envia tu mensaje</a>
+        </div>
     </div>
-    <div class="comienzo">
-        <div class="seguimos">FOTO</div>
+    <div class="fila-footer">
+        <div class="col-12">
+            <p class="derechos">Copyright &copy; 2020 Travehome.com. Todos los derechos reservados</p>
+        </div>
     </div>
-    <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
 </section>
 
