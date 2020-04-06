@@ -310,8 +310,8 @@ function showHousing() {
 
             $usertype = 'traveller';
             $query = "SELECT Housing.ID, Housing.Name_home, Housing.Description, Housing.Address, Housing.City, 
-            Housing.Name_img, Housing.ID_owner FROM Housing, Booking WHERE Housing.Name_home LIKE '%ma%' OR Housing.City 
-            LIKE '%ma%' OR Housing.Country LIKE '%ma'";
+            Housing.Name_img, Housing.ID_owner FROM Housing WHERE Housing.Name_home LIKE '%$busqueda%' OR Housing.City 
+            LIKE '%$busqueda%' OR Housing.Country LIKE '%$busqueda'";
         
         }
     }
@@ -329,47 +329,29 @@ function showHousing() {
     $doQuery = mysqli_query($con, $query);
     if(mysqli_num_rows($doQuery)){ //si la consulta encuentra algun resultado, que nos muestre los campos de la tabla
         
-            ?>
-    
-		        <table border=1>
-			        <tr>
-				        <th>Nombre de la vivienda</th>
-				        <th>Caracteristicas</th>
-				        <th>Direccion</th>
-				        <th>Ciudad</th>
-				        <th>Imagen</th>
-
-			        <?php
-				        if(isset($_SESSION['owner'])){ //esta línea muestra columnas para editar las viviendas y eliminarlas?>
-
-				        <th>Editar</th>
-				        <th>Eliminar</th>
-			
-			        <?php
-			        }
-			        ?>
-
-			        <?php
-				        if(isset($_SESSION['traveller'])){ //esta línea muestra columnas para editar las viviendas y eliminarlas?>
-
-				        <th>Reservar</th>
-			
-			        <?php
-			        }
-			        ?>
-
-				        </tr>
-    
-                    <?php
+        ?>
+        <table class="housing-list" border=1>
+         <?php
                         
-                        while ($datos = mysqli_fetch_row($doQuery)) { //nos muestra los resultados de la consulta
-                            ?>
-                    <tr>
-                    <td><?php echo $datos[1] ?></td>
-                    <td><?php echo $datos[2] ?></td>
-                    <td><?php echo $datos[3] ?></td>
+        while ($datos = mysqli_fetch_row($doQuery)) { //nos muestra los resultados de la consulta
+                            
+        ?>
+
+                <tr>
+                    <td rowspan="5"><img class="info-cities-img" src="View/uploads/<?php echo $datos[5]?>"></td>
+                    <td colspan="2"><?php echo $datos[1] ?></td>
+                </tr>
+                <tr>
                     <td><?php echo $datos[4] ?></td>
-                    <td> <img src="View/uploads/<?php echo $datos[5] ?>"></td>
+                    <td><?php echo $datos[3] ?></td>
+                </tr>
+                <tr>
+                    <td colspan="2" rowspan="2"><?php echo $datos[2] ?></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+            
                     <?php
 
                     if ($usertype == 'traveller'){ 

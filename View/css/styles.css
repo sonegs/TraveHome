@@ -58,28 +58,35 @@
     }
     
     @media screen and (max-width:800px) {
+        /***************************************** HEADER *****************************************/
+        header {
+            width: 100%;
+            position: fixed;
+            z-index: 3;
+            background: #024959;
+            border-radius: 5%;
+            margin-top: -1%;
+        }
         header nav {
-            width: 60%;
+            width: 40%;
             height: 100%;
             left: -100%;
             margin: 0;
             position: fixed;
+            margin-top: 14%;
+            opacity: 0.7;
         }
         header nav ul li {
             display: block;
             float: none;
-            border-bottom: 1px solid rgba(255, 255, 255, .3);
         }
         .menu_bar {
             display: block;
             width: auto;
-            position: relative;
-            background: #ccc;
         }
         .menu_bar .bt-menu {
             display: block;
             padding: 20px;
-            background: #024959;
             color: #fff;
             text-decoration: none;
             font-weight: bold;
@@ -89,9 +96,19 @@
             box-sizing: border-box;
             width: 100%;
         }
+        .user-mail {
+            margin-top: 20%;
+        }
+        .user-mail p {
+            color: #fff;
+            font-size: 11px;
+        }
         .menu_bar span {
             float: right;
             font-size: 40px;
+        }
+        .bt-menu:hover {
+            color: rgb(241, 219, 198);
         }
     }
     /************************************************************************************/
@@ -102,7 +119,6 @@
             width: 100%;
         }
         .col-12 {
-            /* IMPORTANTE */
             position: relative;
             height: 100%;
         }
@@ -117,7 +133,6 @@
             float: left;
             text-align: center;
             height: 100%;
-            margin-top: 4%;
         }
         html,
         body {
@@ -128,33 +143,9 @@
             list-style: none;
             text-decoration: none;
             box-sizing: border-box;
-        }
-        /***************************************** HEADER *****************************************/
-        header {
-            height: 8%;
-            width: 100%;
-            position: fixed;
-            z-index: 3;
-            color: white;
+            font-family: "Roboto", "Lucida Sans Unicode", Arial, sans-serif;
         }
         /***************************************** PANTALLA PRINCIPAL *****************************************/
-        .fila-title {
-            text-align: center;
-            height: 33%;
-            position: relative;
-            width: 100%;
-            vertical-align: middle;
-            float: left;
-        }
-        .fila-entry {
-            text-align: center;
-            height: 20%;
-            position: relative;
-            width: 100%;
-            vertical-align: middle;
-            float: left;
-            margin-top: 20%
-        }
         .principalColorful {
             height: 100%;
             position: relative;
@@ -162,18 +153,30 @@
             background: -webkit-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7)), url(../src/background-main1-1.png);
             background: -moz-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7)), url(../src/background-main1-1.png);
             background: linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7)), url(../src/background-main1-1.png);
+            text-align: center;
+            color: white;
+        }
+        .fila-title {
+            height: 33%;
+            position: relative;
+            width: inherit;
+        }
+        .fila-entry {
+            height: 20%;
+            position: relative;
+            width: inherit;
+            margin-top: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .title-main {
-            font-family: "Roboto", "Lucida Sans Unicode", Arial, sans-serif;
             font-size: 350%;
             font-weight: bold;
-            color: white;
             padding-top: 50%;
         }
         .info-main {
-            font-family: "Roboto", "Lucida Sans Unicode", Arial, sans-serif;
             font-size: 120%;
-            color: white;
             padding: 45% 15% 0% 15%;
         }
         .users-bottons {
@@ -186,49 +189,36 @@
             font-family: "Roboto", "Lucida Sans Unicode", Arial, sans-serif;
             font-size: 100%;
         }
+        .users-bottons:hover {
+            background-color: #e29166;
+        }
         /**************************************** INFO GENERAL *******************************************/
         .principal-info {
             height: 80%;
             position: relative;
             width: 100%;
             background: rgb(255, 255, 255);
+            text-align: center;
+            font-family: "Helvetica Neue", "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            color: #3596C9;
+            font-variant: small-caps;
         }
         .fila-info {
-            text-align: center;
-            width: 100%;
-            vertical-align: middle;
             float: left;
             height: 25%;
             margin-top: 5%;
         }
         .info-title {
-            text-align: center;
-            font-family: "Helvetica Neue", "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
             font-size: 250%;
-            color: #3596C9;
-            font-style: normal;
-            font-variant: small-caps;
-            text-transform: none;
-            position: relative;
             float: left;
             margin-top: 5%;
             width: 100%;
         }
         .info {
-            text-align: center;
-            font-family: "Helvetica Neue", "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
             font-size: 140%;
-            color: #3596C9;
-            font-style: normal;
-            font-variant: small-caps;
-            text-transform: none;
-            position: relative;
             float: left;
         }
         .fila-info-img {
-            text-align: center;
-            position: relative;
-            width: 100%;
             float: left;
             height: 60%;
         }
@@ -275,7 +265,7 @@
             text-decoration: none solid rgb(68, 68, 68);
             font-style: normal;
             font-variant: small-caps;
-            opacity: 0.8;
+            opacity: 0.9;
             text-transform: none;
             position: relative;
             float: left;
@@ -318,7 +308,7 @@
             position: relative;
             float: left;
             margin-top: 15%;
-            margin-bottom: 5%;
+            margin-bottom: 2%;
             width: 100%;
         }
         .fila-info-cities {
@@ -327,7 +317,7 @@
             width: 100%;
             vertical-align: middle;
             float: left;
-            height: 26%;
+            height: 28%;
             background: -webkit-linear-gradient(10deg, rgba(255, 255, 255, 0.85), rgba(196, 188, 188, 0.7));
             background: -moz-linear-gradient(100deg, rgba(160, 156, 156, 0.85), rgba(196, 188, 188, 0.7));
             background: linear-gradient(45deg, rgba(236, 229, 229, 0.85), rgba(175, 170, 170, 0.7));
@@ -343,8 +333,7 @@
             font-variant: small-caps;
             text-transform: none;
             position: relative;
-            float: left;
-            margin: 0% 0% 0% 5%;
+            float: left
         }
         .info-cities-img {
             text-align: center;
@@ -416,15 +405,16 @@
             float: left;
             height: auto;
             padding-top: 5%;
+            padding-left: 2%;
             height: 20%
         }
         .info-login-img {
             text-align: center;
             width: 80%;
             height: 130px;
-            position: relative;
             float: left;
             margin: 0px auto;
+            position: relative;
         }
         .info-position-img {
             margin-left: 25%;
@@ -458,6 +448,21 @@
             color: white;
             font-family: "Source Sanz Pro", sans-serif;
         }
+        .message-login {
+            text-align: center;
+            font-family: "Source Sanz Pro", sans-serif;
+            font-size: 120%;
+            color: rgb(247, 244, 244);
+            text-decoration: none solid rgb(68, 68, 68);
+            font-style: normal;
+            font-variant: small-caps;
+            opacity: 0.9;
+            text-transform: none;
+            position: relative;
+            float: left;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
         /***************************************** FOOTER DE CONTACTO *****************************************/
         .contact {
             height: 14%;
@@ -470,6 +475,7 @@
             position: relative;
             float: left;
             width: 100%;
+            margin-top: 3%;
         }
         .contact-info {
             color: white;
@@ -478,6 +484,10 @@
             width: 100%;
             font-size: 10px;
             text-align: center;
+        }
+        .col-contact {
+            position: relative;
+            margin-top: 3%;
         }
         /***************************************** SIGN UP *****************************************/
         .principalSignup {
@@ -570,6 +580,22 @@
             width: 100%;
             float: left;
             margin-top: -10%;
+        }
+        /***************************************** PANTALLA USUARIOS *****************************************/
+        .position-buttonuser {
+            margin-top: 5%;
+        }
+        /***************************************** OPCIONES TRAVELLERS *****************************************/
+        /***************************************** BUSCAR CIUDAD *****************************************/
+        .looking {
+            margin-top: 20%;
+            position: relative;
+        }
+        .housing-list {
+            width: 100%;
+            border: 1px solid;
+            border-color: #e7ad6b;
+            padding: 4px;
         }
     }
     /********************************* ESTILOS PARA LA VALORACIÓN EN ESTRELLAS *****************************************/

@@ -41,21 +41,18 @@ elseif(isset($_SESSION['traveller'])){
 			include "View/Mains/menu_user.php";
 			break;
 		case '1':
-			include "View/Mains/info.php";
-			break;
-		case '2':
 			include "View/Housing/housing_list.php";
 			break;
-		case '3':
+		case '2':
 			include "View/Booking/mybookings.php";
 			break;
-		case '4':
+		case '3':
 			include "View/Sessions/setting.php";
 			break;
-		case '5':
+		case '4':
 			include "View/Mains/contact.php";
 			break;
-		case '6':
+		case '5':
 			include "View/Sessions/logout.php";
 			break;
 		case '7':
@@ -89,21 +86,18 @@ elseif(isset($_SESSION['owner'])){
 			include "View/Mains/menu_user.php";
 			break;
 		case '1':
-			include "View/Mains/info.php";
-			break;
-		case '2':
 			include "View/Housing/housing.php";
 			break;
-		case '3':
+		case '2':
 			include "View/Housing/housing_list.php";
 			break;
-		case '4':
+		case '3':
 			include "View/Booking/mybookings.php";
 			break;
-		case '5':
+		case '4':
 			include "View/Sessions/setting.php";
 			break;
-		case '6':
+		case '5':
 			include "View/Mains/contact.php";
 			break;
 		case '7':

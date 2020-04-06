@@ -24,7 +24,6 @@
                                 <?php
                                     
                                     if(isset($_POST['submit'])){
-                                        echo "agua";
                                         include "Model/queries/queries_users.php";
                                         insertUser();
                                         

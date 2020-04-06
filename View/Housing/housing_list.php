@@ -1,4 +1,4 @@
-<section>
+<section class="principal-info">
 
 <?php
 
@@ -8,8 +8,8 @@ if(isset($_SESSION['traveller'])){ ?>
 
 	<form method="POST" action="">
 
-  		Buscar: <input type="text" name="looking" autofocus>
-  		<input type="submit" name="submit" value="Buscar" class="input_form">
+  		Ciudad de destino: <input type="text" name="looking" autofocus class="looking"><br><br>
+  		<input type="submit" name="submit" value="Buscar" class="users-bottons"><br><br>
 	
 	</form>
 	<?php

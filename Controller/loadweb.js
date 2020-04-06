@@ -26,6 +26,14 @@ function main() {
 
 $(document).ready(function() {
 
+    $("#owner-option").click(function() {
+        $("#casa").animate({ marginTop: 0 }, 50).animate({ marginTop: -15 }, 200).animate({ marginTop: 0 }, 200).animate({ marginTop: -15 }, 200).animate({ marginTop: 0 }, 200);
+    });
+
+    $("#traveller-option").click(function() {
+        $("#mochila").animate({ marginTop: 0 }, 50).animate({ marginTop: -15 }, 200).animate({ marginTop: 0 }, 200).animate({ marginTop: -15 }, 200).animate({ marginTop: 0 }, 200);
+    });
+
     $("#checkdates").click(function() {
 
         var checkin = document.getElementById('start').value;

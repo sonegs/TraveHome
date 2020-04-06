@@ -77,19 +77,19 @@ function login(){
   
                 } else {
   
-                  echo "<div class='fila-info-owners'>La contraseña que ha introducido no es correcta</div>";
+                  echo "<div class='message-login'>La contraseña que ha introducido no es correcta</div>";
   
                 }
               
               } else {
   
-                echo "<div class='fila-info-owners'>El email que ha introducido no ha sido registrado en nuestra BBDD.<br><br>Por favor, compruebe su dirección de email y vuelva a introducirlo</div>";
+                echo "<div class='message-login'>El email que ha introducido no ha sido registrado en nuestra BBDD.Por favor, compruebe su dirección de email y vuelva a introducirlo</div>";
               }
               
         
             } else {
   
-              echo "<div class='fila-info-owners'Por favor, seleccione si es un usuario traveller o un usuario owner</div>";
+              echo "<div class='message-login'Por favor, seleccione si es un usuario traveller o un usuario owner</div>";
   
             }
            
@@ -191,7 +191,7 @@ function insertUser() { // le pasamos los valores necesarios para insertar un re
 
     } else {
 
-        echo "<div class='fila-info-owners'>Hay algun error en los datos rellenados. Por favor, compruebe que se han introducido correctamente</div>";
+        echo "<div class='message-login'>Hay algun error en los datos rellenados. Por favor, compruebe que se han introducido correctamente</div>";
         var_dump($errores);
     }
 
@@ -202,12 +202,11 @@ function insertUser() { // le pasamos los valores necesarios para insertar un re
 
         if (mysqli_query($con, $query)) {
 
-            echo "<div class='fila-info-owners'>Se ha introducido correctamente</div>";
+            echo "<div class='message-login'>Se ha introducido correctamente</div>";
         
         } else{
 
-            echo "<div class='fila-info-owners'>Su DNI coincide con el de otro usuario ya registrado</div>";
-            var_dump($con);
+            echo "<div class='message-login'>Su DNI coincide con el de otro usuario ya registrado</div>";
             //var_dump($con);
             //var_dump($query);
 
@@ -223,11 +222,11 @@ function insertUser() { // le pasamos los valores necesarios para insertar un re
 
         if (mysqli_query($con, $query)) {
 
-            echo "<div class='fila-info-owners'>Se ha introducido correctamente</div>";
+            echo "<div class='message-login'>Se ha introducido correctamente</div>";
         
         } else{
 
-            echo "<div class='fila-info-owners'Su DNI coincide con el de otro usuario ya registrado</div>";
+            echo "<div class='message-login'Su DNI coincide con el de otro usuario ya registrado</div>";
             //var_dump($con);
             //var_dump($query);
 
@@ -277,13 +276,13 @@ function deleteUser() {
     
     if (mysqli_query($con, $query)) {
 
-        echo "div class='fila-info-owners'>Se ha eliminado correctamente</div>";
+        echo "div class='message-login'>Se ha eliminado correctamente</div>";
         unset($_SESSION['traveller']);
         unset($_SESSION['owner']);
         
     } else{
 
-        echo "<div class='fila-info-owners'>Se ha producido un error, ¿ha introducido los datos correctamente?</div>";
+        echo "<div class='message-login'>Se ha producido un error, ¿ha introducido los datos correctamente?</div>";
 
     }
 
@@ -381,7 +380,7 @@ function editUser($dni, $direccion, $cp, $ciudad, $pais, $email, $contrasena, $t
 
     } else {
 
-        echo "<div class='fila-info-owners'>Hay algun error en los datos rellenados. Por favor, compruebe que se han introducido correctamente</div>";
+        echo "<div class='message-login'>Hay algun error en los datos rellenados. Por favor, compruebe que se han introducido correctamente</div>";
         var_dump($errores);
 
     }
@@ -408,11 +407,11 @@ function editUser($dni, $direccion, $cp, $ciudad, $pais, $email, $contrasena, $t
 
         if($tested != 0) {
  
-            echo "<div class='fila-info-owners'>Se actualizaron tus datos</hdiv";
+            echo "<div class='message-login'>Se actualizaron tus datos</hdiv";
 
             } else {
                 
-                echo "<div class='fila-info-owners'>Se ha producido un error en la consulta, ¿ha introducido su DNI correctamente?</div>";
+                echo "<div class='message-login'>Se ha producido un error en la consulta, ¿ha introducido su DNI correctamente?</div>";
 
                 exit();
 
@@ -420,7 +419,7 @@ function editUser($dni, $direccion, $cp, $ciudad, $pais, $email, $contrasena, $t
         
     } else {
             
-        echo "<div class='fila-info-owners'Se ha producido un error en la consulta, ¿ha introducido sus datos correctamente?</div>";
+        echo "<div class='message-login'Se ha producido un error en la consulta, ¿ha introducido sus datos correctamente?</div>";
         var_dump($con);
     
         }
@@ -475,11 +474,11 @@ function forgetUser(){
 
         if(mail($element[0], 'Confirmación de contraseña', $mensaje)){
             
-            echo "<div class='fila-info-owners'>Se ha enviado un email a su dirección de correo electrónico</div>";
+            echo "<div class='message-login'>Se ha enviado un email a su dirección de correo electrónico</div>";
             
         } else {
 
-            echo "<div class='fila-info-owners'>Ha habido algun error a la hora de enviarle su email. Por favor, póngase en contacto con nosotros</div>";
+            echo "<div class='message-login'>Ha habido algun error a la hora de enviarle su email. Por favor, póngase en contacto con nosotros</div>";
             
         };
         
@@ -487,7 +486,7 @@ function forgetUser(){
 
     } else {
 
-        echo "<div class='fila-info-owners'>Esa dirección de email no ha sido registrada anteriormente con ese tipo de usuario</div>";
+        echo "<div class='message-login'>Esa dirección de email no ha sido registrada anteriormente con ese tipo de usuario</div>";
         
     }
 }
@@ -551,11 +550,11 @@ function reminderUser($email, $contrasena) {
 
         if($tested != 0) {
  
-            echo "<div class='fila-info-owners'>Se actualizaron tus datos</div>";
+            echo "<div class='message-login'>Se actualizaron tus datos</div>";
 
             } else {
                 
-                echo "<div class='fila-info-owners'>Su correo electrónico no consta en nuestra base de datos, por favor, compruebelo y vuelva a intentarlo</div>";
+                echo "<div class='message-login'>Su correo electrónico no consta en nuestra base de datos, por favor, compruebelo y vuelva a intentarlo</div>";
 
                 exit();
 
@@ -563,7 +562,7 @@ function reminderUser($email, $contrasena) {
         
     } else {
             
-        echo "<div class='fila-info-owners'Se ha producido un error en la consulta, ¿ha introducido sus datos correctamente?</div>";
+        echo "<div class='message-login'Se ha producido un error en la consulta, ¿ha introducido sus datos correctamente?</div>";
     
         }
 
