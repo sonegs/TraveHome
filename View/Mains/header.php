@@ -31,30 +31,29 @@
 <header>
 
 	<div class="col-4">
-	<div class="menu_bar">
-	
-		<a href="#" class="bt-menu"><i class="fas fa-bars"></i></a>
-	</div>
-	</div>
-	<div class="col-4">
-	<div class="menu_bar"><?php
-	if(isset($_SESSION['traveller'])):
-		echo "<a href='index.php?tr=200' class='bt-menu'><i class='fas fa-home'></i></a>";
-	elseif(isset($_SESSION['owner'])):
-		echo "<a href='index.php?ow=200' class='bt-menu'><i class='fas fa-home'></i></a>";
-	else:?>
-	 	<a href="index.php" class="bt-menu"><i class="fas fa-home"></i></a> <?php endif; ?>
-	</div>
+		<div class="menu_bar">
+			<a href="#" class="bt-menu"><i class="fas fa-bars"></i></a>
+		</div>
 	</div>
 	<div class="col-4">
-	<div class="user-mail"><?php
-	if(isset($_SESSION['traveller'])):
-		echo "<p>".$_SESSION['traveller']['Email']."</p>";
-	endif;
-	if(isset($_SESSION['owner'])):
-		echo "<p>".$_SESSION['owner']['Email']."</p>";
-	endif;?>
+		<div class="menu_bar"><?php
+		if(isset($_SESSION['traveller'])):
+			echo "<a href='index.php?tr=200' class='bt-menu'><i class='fas fa-home'></i></a>";
+		elseif(isset($_SESSION['owner'])):
+			echo "<a href='index.php?ow=200' class='bt-menu'><i class='fas fa-home'></i></a>";
+		else:?>
+			<a href="index.php" class="bt-menu"><i class="fas fa-home"></i></a> <?php endif; ?>
+		</div>
 	</div>
+	<div class="col-4">
+		<div class="user-mail"><?php
+		if(isset($_SESSION['traveller'])):
+			echo "<p>".$_SESSION['traveller']['Email']."</p>";
+		endif;
+		if(isset($_SESSION['owner'])):
+			echo "<p>".$_SESSION['owner']['Email']."</p>";
+		endif;?>
+		</div>
 	</div>
 	<nav>
 		<ul>

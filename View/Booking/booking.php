@@ -17,15 +17,16 @@
                 } 
 
         }
-        ?>
+?>
 
-<section class="main">
-    <form class="uno" method="POST" action="index.php?tr=%208">
+<section class="principalBooking">
+    <form class="info-files" method="POST" action="index.php?tr=%208">
             
-            <h1 class="title"><?php echo $_POST['name']?></h1>
+            <div class="title-book"><?php echo $_POST['name']?></div>
+            <div class="subtitle-book"><?php echo $_POST['direccion'].' - '.$_POST['ciudad'].', '.$_POST['pais']?></div>
+            <div class="imagen-book"><img name="name-img" src="View/uploads/<?php echo $_POST['name-img']?>"></div>
+            <div class="description-book"><?php echo $_POST['description']?></div>
             
-            <img name="name-img" src="View/uploads/<?php echo $_POST['name-img']?>">
-            <h4 class="text"><?php echo $_POST['description']?></h4>
             
             Valoracion<h4 class="number"><?php echo $_POST['assessment']?></h4>
             Comentario<h4 class="text"><?php echo $_POST['content']?></h4>
@@ -33,10 +34,9 @@
 
             <?php
 
-            // Aquí aparecen los comentarios de otros viajeros
-
-            include "Model/queries/queries_comments.php";
-            showComments($_POST['idHouse']); 
+                // Aquí aparecen los comentarios de otros viajeros
+                include "Model/queries/queries_comments.php";
+                showComments($_POST['idHouse']); 
 
             ?>
 

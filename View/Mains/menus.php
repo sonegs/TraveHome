@@ -13,7 +13,7 @@ include "View/Mains/header.php";
 			header('Location: index.php');
 			break;
 		case '1':
-			include "View/Mains/cities.php";
+			header('Location: index.php#ciudades');
 			break;
 		case '2':
 			include "View/Sessions/login.php";
@@ -128,7 +128,6 @@ elseif(isset($_SESSION['owner'])){
 	include "View/Mains/info.php";
 	include "View/Mains/info2.php";
 	include "View/Mains/cities.php";
-	include "View/Sessions/login.php";
 	include "View/Mains/contact.php";
 	
 }		

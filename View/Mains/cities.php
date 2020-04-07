@@ -1,4 +1,4 @@
-<section class="principal-cities">
+<section class="principal-cities" id="ciudades">
 <div class="info-title-cities">Ciudades disponibles</div>
 
     <div class="fila-info-cities">

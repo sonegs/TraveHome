@@ -1,4 +1,4 @@
-<section class="principal-info">
+<section class="cities-list">
 
 <?php
 

@@ -1,4 +1,13 @@
 <section class="principalSignup">
+<?php
+                                    
+    if(isset($_POST['submit'])){
+        include "Model/queries/queries_users.php";
+        insertUser();
+                                        
+    } 
+
+    ?>
     <div class="title-signup">Crea tu cuenta</div>
             <div class="fila-form-signup">
                 <div class="col-12">
@@ -21,15 +30,7 @@
                             <a href="index.php?nu=%202" class="signup-button">¿Tienes una cuenta? Inicia sesión </a><br><br>
                             <a href="index.php" class="button">Volver</a>
 
-                                <?php
-                                    
-                                    if(isset($_POST['submit'])){
-                                        include "Model/queries/queries_users.php";
-                                        insertUser();
-                                        
-                                    } 
-
-                                ?>
+                                
                         </form>
                     </div>
                 </div>

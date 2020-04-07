@@ -310,7 +310,7 @@ function showHousing() {
 
             $usertype = 'traveller';
             $query = "SELECT Housing.ID, Housing.Name_home, Housing.Description, Housing.Address, Housing.City, 
-            Housing.Name_img, Housing.ID_owner FROM Housing WHERE Housing.Name_home LIKE '%$busqueda%' OR Housing.City 
+            Housing.Name_img, Housing.ID_owner, Housing.Country FROM Housing WHERE Housing.Name_home LIKE '%$busqueda%' OR Housing.City 
             LIKE '%$busqueda%' OR Housing.Country LIKE '%$busqueda'";
         
         }
@@ -330,68 +330,84 @@ function showHousing() {
     if(mysqli_num_rows($doQuery)){ //si la consulta encuentra algun resultado, que nos muestre los campos de la tabla
         
         ?>
-        <table class="housing-list" border=1>
+        <div class="housing-list">
          <?php
                         
         while ($datos = mysqli_fetch_row($doQuery)) { //nos muestra los resultados de la consulta
                             
         ?>
-
-                <tr>
-                    <td rowspan="5"><img class="info-cities-img" src="View/uploads/<?php echo $datos[5]?>"></td>
-                    <td colspan="2"><?php echo $datos[1] ?></td>
-                </tr>
-                <tr>
-                    <td><?php echo $datos[4] ?></td>
-                    <td><?php echo $datos[3] ?></td>
-                </tr>
-                <tr>
-                    <td colspan="2" rowspan="2"><?php echo $datos[2] ?></td>
-                </tr>
-                <tr>
-                </tr>
-                <tr>
-            
+            <div class="house-file">
+                <div class="col-6">
+                    <div class="image-listhouse">
+                        <img class="listhousing-img" src="View/uploads/<?php echo $datos[5]?>">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="info-house">
+                        <div class="name-house"><?php echo $datos[1]?></div>
+                        <div class="details-house">
+                            <div class="address-house">
+                                <?php echo 'Dirección: '.$datos[3] ?>
+                            </div>
+                            <div class="city-house">
+                                <?php echo $datos[4].', '.$datos[7] ?>
+                            </div>
+                            <div class="description-house">
+                                <?php echo $datos[2] ?>
+                            </div>
+                        </div>
+                    
+                   
+                
                     <?php
 
                     if ($usertype == 'traveller'){ 
                             ?>
 
-                        <td id="reservar">
-                            <form action="index.php?tr=%208" method="POST"> 
+                        <div id="reservar">
+                            <form action="index.php?tr=%208" method="POST" class="looking-cities"> 
                             <input type="number" name="idHouse" value="<?php echo $datos[0]?>" class="input_form" hidden>
                             <input type="text" name="name" value="<?php echo $datos[1]?>" class="input_form" hidden>
                             <input type="text" name="description" value="<?php echo $datos[2]?>" class="input_form" hidden>
+                            <input type="text" name="direccion" value="<?php echo $datos[3]?>" class="input_form" hidden>
+                            <input type="text" name="ciudad" value="<?php echo $datos[4]?>" class="input_form" hidden>
+                            <input type="text" name="pais" value="<?php echo $datos[7]?>" class="input_form" hidden>
                             <input type="text" name="name-img" value="<?php echo $datos[5]?>" class="input_form" hidden>
                             <input type="number" name="idOwner" value="<?php echo $datos[6]?>" class="input_form" hidden>
-                            <input type="submit" value="Reservar" class="input_form">
+                            <input type="submit" value="Reservar" class="users-bottons-housing">
                             </form>
-                        </td>
+                    </div>
      
                     <?php }
 
                     if ($usertype == 'owner'){?>
 
-                        <td id="editar">
-                            <form action="index.php?ow=%209" method="POST">                        
+                        <div class="col-6">
+                        <div id="editar">
+                            <form action="index.php?ow=%209" method="POST" class="looking-cities">                        
                                 <input type="number" name="idHouse" value="<?php echo $datos[0]?>" class="input_form" hidden>
-                                <input type="submit" value="Editar" class="input_form">
+                                <input type="submit" value="Editar" class="users-bottons-housing">
                             </form>
-                        </td>
-                        <td id="eliminar">
-                            <form action="index.php?ow=%2011" method="POST">
+                        </div>
+                        </div>
+                        <div class="col-6">
+                        <div id="eliminar">
+                            <form action="index.php?ow=%2011" method="POST" class="looking-cities">
                                 <input type="number" name="idHouse" value="<?php echo $datos[0]?>" class="input_form" hidden>
                                 <input type="text" name="nameHouse" value="<?php echo $datos[1]?>" class="input_form" hidden>
                                 <input type="text" name="name_img" value="<?php echo $datos[5]?>" class="input_form" hidden>
-                                <input type="submit" value="Eliminar" class="input_form">
+                                <input type="submit" value="Eliminar" class="users-bottons">
                             </form>
-                        </td>
+                        </div>
+                        </div>
                     <?php } ?>
          
-                    </tr>
-            
+                    </div>
+                </div>
+            </div>
+
                     <?php
-           
+           //Cierre de los divs que formulan la tabla y del while
                     }
         
         
@@ -404,7 +420,7 @@ function showHousing() {
         
         ?>
 
-        </table>
+    </div>
                         
         <?php
 

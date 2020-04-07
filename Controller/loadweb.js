@@ -26,14 +26,23 @@ function main() {
 
 $(document).ready(function() {
 
-    $("#owner-option").click(function() {
-        $("#casa").animate({ marginTop: 0 }, 50).animate({ marginTop: -15 }, 200).animate({ marginTop: 0 }, 200).animate({ marginTop: -15 }, 200).animate({ marginTop: 0 }, 200);
-    });
-
     $("#traveller-option").click(function() {
-        $("#mochila").animate({ marginTop: 0 }, 50).animate({ marginTop: -15 }, 200).animate({ marginTop: 0 }, 200).animate({ marginTop: -15 }, 200).animate({ marginTop: 0 }, 200);
+        $("#traveller-icon").animate({ marginTop: 0 }, 50).animate({ marginTop: -15 }, 200).animate({ marginTop: 0 }, 200).animate({ marginTop: -15 }, 200).animate({ marginTop: 0 }, 200);
     });
 
+    $("#owner-option").click(function() {
+        $("#owner-icon").animate({ marginTop: 0 }, 50).animate({ marginTop: -15 }, 200).animate({ marginTop: 0 }, 200).animate({ marginTop: -15 }, 200).animate({ marginTop: 0 }, 200);
+    });
+
+    //.toggle( "bounce", { times: 3 }, "slow" );
+    /*
+        $("#traveller-option").click(function() {
+            $("#traveller-icon").toggle("bounce", { times: 3 }, "slow");
+        });
+
+        $("#owner-option").click(function() {
+            $("#owner-icon").toggle("bounce", { times: 3 }, "slow");
+        });*/
     $("#checkdates").click(function() {
 
         var checkin = document.getElementById('start').value;
