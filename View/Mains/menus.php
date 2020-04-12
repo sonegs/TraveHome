@@ -50,21 +50,18 @@ elseif(isset($_SESSION['traveller'])){
 			include "View/Sessions/setting.php";
 			break;
 		case '4':
-			include "View/Mains/contact.php";
+		include "View/Sessions/logout.php";
 			break;
 		case '5':
-			include "View/Sessions/logout.php";
-			break;
-		case '7':
 			include "View/Sessions/delete.php";
 			break;
-		case '8':
+		case '6':
 			include "View/Booking/booking.php";
 			break;
-		case '9':
+		case '7':
 			include "View/Booking/acceptbook.php";
 			break;
-		case '10':
+		case '8':
 			include "View/Booking/comments.php";
 			break;
 		default:
@@ -98,21 +95,18 @@ elseif(isset($_SESSION['owner'])){
 			include "View/Sessions/setting.php";
 			break;
 		case '5':
-			include "View/Mains/contact.php";
-			break;
-		case '7':
 			include "View/Sessions/logout.php";
 			break;
-		case '8':
+		case '7':
 			include "View/Sessions/delete.php";
 			break;
-		case '9':
+		case '8':
 			include "View/Housing/housingchange.php";
 			break;
-		case '10':
+		case '9':
 			include "View/Booking/acceptbook.php";
 			break;
-		case '11':
+		case '10':
 			include "View/Housing/deletehousing.php";
 			break;
 		default:

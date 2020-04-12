@@ -2,7 +2,7 @@
 
 include "../DDBB/connection.php";
 
-$query = "UPDATE Booking SET State = 'Expirada' WHERE State = 'Aceptada' AND checkout = CURDATE()";
+$query = "UPDATE Booking SET State = 'Expirada' WHERE (State = 'Aceptada' OR State= 'Pendiente') AND checkout < CURDATE()";
 
 if(mysqli_query($con, $query)) {
 

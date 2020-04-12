@@ -1,17 +1,26 @@
-<section class="cities-list">
+<section class="mybookings">
 
 <?php
 
 include "Model/queries/queries_housing.php";
 
 if(isset($_SESSION['traveller'])){ ?>
-
-	<form method="POST" action="">
-
-  		Ciudad de destino: <input type="text" name="looking" autofocus class="looking"><br><br>
-  		<input type="submit" name="submit" value="Buscar" class="users-bottons"><br><br>
+	<div class="searcher-position">
+			<form class="looking-city" method="POST" action="">
+			<div class="searcher">
+				<div class="position-form">
+					Destino: <input type="text" name="looking" autofocus class="looking">
+				</div>
+			</div>
+			<div class="button-searcher">
+				<div class="position-form">
+					<input type="submit" name="submit" value="Buscar" class="users-buttons" id="update-states"><br><br>
+				</div>
+			</div>
 	
-	</form>
+			</form>
+		
+	</div>
 	<?php
 
 	if(isset($_POST['submit'])){
@@ -21,10 +30,16 @@ if(isset($_SESSION['traveller'])){ ?>
 	}
 }
 
-if(isset($_SESSION['owner'])){
-
+if(isset($_SESSION['owner'])){ ?>
+	<div class="my-housing-list">
+	</div>
+		<?php
 		showHousing();
+		?>
+		
+	
 
+<?php
 }
 
 ?>

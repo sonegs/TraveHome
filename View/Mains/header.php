@@ -5,8 +5,7 @@
 		1 =>	'BUSCAR CIUDAD',
 		2 =>	'MIS RESERVAS',
 		3 =>	'EDITAR',
-		4 =>	'CONTACTO',
-		5 =>	'CERRAR SESION'
+		4 =>	'CERRAR SESION'
 	);	
 
 	$menuOwner = array(
@@ -15,8 +14,7 @@
 		2 =>	'VER TUS VIVIENDAS',
 		3 =>	'VER RESERVAS',
 		4 =>	'EDITAR',
-		5 =>	'CONTACTO',
-		6 =>	'CERRAR SESION'
+		5 =>	'CERRAR SESION'
 	);	
 
 	$menuNoUser = array(
@@ -29,30 +27,21 @@
 ?>
 
 <header>
-
-	<div class="col-4">
-		<div class="menu_bar">
-			<a href="#" class="bt-menu"><i class="fas fa-bars"></i></a>
+	<div class="center-header">
+        <div class="col-header">
+			<div class="menu_bar">
+				<a href="#" class="bt-menu"><i class="fas fa-bars"></i></a>
+			</div>
 		</div>
 	</div>
-	<div class="col-4">
-		<div class="menu_bar"><?php
+	<div class="center-header">
+        <div class="col-header"><?php
 		if(isset($_SESSION['traveller'])):
 			echo "<a href='index.php?tr=200' class='bt-menu'><i class='fas fa-home'></i></a>";
 		elseif(isset($_SESSION['owner'])):
 			echo "<a href='index.php?ow=200' class='bt-menu'><i class='fas fa-home'></i></a>";
 		else:?>
 			<a href="index.php" class="bt-menu"><i class="fas fa-home"></i></a> <?php endif; ?>
-		</div>
-	</div>
-	<div class="col-4">
-		<div class="user-mail"><?php
-		if(isset($_SESSION['traveller'])):
-			echo "<p>".$_SESSION['traveller']['Email']."</p>";
-		endif;
-		if(isset($_SESSION['owner'])):
-			echo "<p>".$_SESSION['owner']['Email']."</p>";
-		endif;?>
 		</div>
 	</div>
 	<nav>
@@ -102,6 +91,16 @@
 			?>
 
 		</ul>
-	</nav>
+		</nav>
+	<div class="email-header">
+        <div class="user-mail"><?php
+		if(isset($_SESSION['traveller'])):
+			echo $_SESSION['traveller']['Email'];
+		endif;
+		if(isset($_SESSION['owner'])):
+			echo $_SESSION['owner']['Email'];
+		endif;?>
+		</div>
 	</div>
+	
 </header>

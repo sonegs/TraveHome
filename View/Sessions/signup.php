@@ -1,4 +1,4 @@
-<section class="principalSignup">
+<section class="totalSignup">
 <?php
                                     
     if(isset($_POST['submit'])){
@@ -8,7 +8,14 @@
     } 
 
     ?>
-    <div class="title-signup">Crea tu cuenta</div>
+    <div class="title-signup">
+        <div class="center-title-signup">
+            <div class="info-title-signup">
+                Crea tu cuenta
+            </div>
+        </div>
+    </div>
+
             <div class="fila-form-signup">
                 <div class="col-12">
                     <div class="signup">
@@ -24,16 +31,24 @@
                             <h5>Código postal</h5><input type="number" name="cp" value="" class="signup_form" maxlength="6" minlength="5" required><br><br>
                             <h5>Ciudad</h5><input type="text" name="ciudad" value="" class="signup_form" required><br><br>
                             <h5>País</h5><input type="text" name="pais" value="España" class="signup_form" required><br><br>
-                            <input type="radio" name="usertype" value="traveller" class="radio-signup"> Soy un traveller
-                            <input type="radio" name="usertype" value="owner" class="radio-signup" required> Soy un anfitrión<br>
-                            <input type="submit" name="submit" value="Crear" class="users-bottons"><br><br><br>
-                            <a href="index.php?nu=%202" class="signup-button">¿Tienes una cuenta? Inicia sesión </a><br><br>
-                            <a href="index.php" class="button">Volver</a>
-
-                                
+                            <div class="radio-buttons">
+                                <input type="radio" name="usertype" value="traveller" class="radio-signup"> Soy un traveller
+                                <input type="radio" name="usertype" value="owner" class="radio-signup" required> Soy un anfitrión<br>
+                            </div>
+                            <div class="send">
+                                <input type="submit" name="submit" value="Crear" class="users-buttons">
+                            </div>
+                            <div class="fila-login-others">
+                                <div class="position-signup-others">
+                                    <a href="index.php?nu=%202" class="signup-button">¿Tienes una cuenta? Inicia sesión </a>
+                                </div>
+                                <div class="position-signup-others">
+                                    <a href="index.php" class="button">Volver</a>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
+        
 </section>

@@ -1,17 +1,29 @@
-<section class="main">
-    <form enctype="multipart/form-data" action="" method="POST">
-            <h1 class="title">My Housing</h1>
-            <img class="mb-4" src="src/logo.png" alt="" width="172" height="172">
-            <h1 class="h3 mb-3 font-weight-normal">¿Está seguro de que quiere eliminar la siguiente vivienda?</h1>
-            <p value="<?php echo $_POST['nameHouse']?>"></p>
-            <input type="number" name="idHouse" value="<?php echo $_POST['idHouse']?>" class="input_form" hidden>
-            <h4><?php echo $_POST['nameHouse']?></h4>
-            <img src="View/uploads/<?php echo $_POST['name_img']?>"><br>
-            <input type="submit" name="submit" value="Eliminar" class="input_form">
-            <input type="submit" name="reset" value="Cancelar" class="input_form">
+<section class="mybookings">
+    <form class="house-form" method="POST" action="">
+    
+    <div class="title-signup">
+        <div class="center-title-signup">
+            <div class="info-title-signup">
+                <?php echo $_POST['nameHouse']?>
             </div>
-        </form>
-    </section>
+        </div>
+    </div>
+            <div class="subtitle-book"><?php echo $_POST['direccion'].' - '.$_POST['ciudad'].', '.$_POST['pais']?></div>
+            <div class="imagen-book">
+                <img name="name-img" class="image-book" src="View/uploads/<?php echo $_POST['name-img']?>">
+            </div>
+            <div class="size-description-book">
+                <div class="position-description-book">
+                    <div class="description-book"><?php echo $_POST['description']?></div>
+                </div>
+            </div>
+            <input type="number" name="idHouse" value="<?php echo $_POST['idHouse']?>" class="input_form" hidden>
+            <div class="delete-advice">¿Está seguro de que quiere eliminar esta vivienda</div>
+            <div class="books-buttons">
+                <input type="submit" name="submit" value="Eliminar" class="users-buttons" id="checkdates">
+                <input type="reset" onclick="location.href='index.php?ow=02'" id="fechas" value="Cancelar" class="users-buttons">
+            </div>
+            </div>
 
     <?php  
 
@@ -21,14 +33,11 @@
                 
                 include "Model/queries/queries_housing.php";
                 deleteHousing();
-                header('Location: index.php?ow=%203');
+                header('Location: index.php?ow=%202');
                 
             }
 
-            if(isset($_POST['reset'])){
-                
-                header('Location: index.php?ow=%203');
-                
-            }
             
     ?>
+        </form>
+    </section>

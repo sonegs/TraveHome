@@ -1,697 +1,2221 @@
-    /*CSS GLOBAL */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    /* TELEFONOS MOVILES */
-    
-    header nav {
-        width: 90%;
-        max-width: 1000px;
-        margin: 20px auto;
-        background: #024959;
-    }
-    
-    .menu_bar {
-        display: none;
-    }
-    
-    header nav ul {
-        overflow: hidden;
-        list-style: none;
-        margin-left: -15%;
-    }
-    
-    header nav ul li a {
-        color: #fff;
-        padding: 20px;
-        display: block;
-        text-decoration: none;
-        float: left;
-    }
-    
-    header nav ul li span {
-        margin-right: 10px;
-    }
-    
-    header nav ul li a:hover {
-        background: #037E8C;
-    }
-    
-    @media screen and (max-width:800px) {
-        /***************************************** HEADER *****************************************/
-        header {
-            width: 100%;
-            position: fixed;
-            z-index: 3;
-            background: #024959;
-            border-radius: 5%;
-            height: 60px;
-            left: 0;
-            top: 0;
-        }
-        header nav {
-            width: 40%;
-            height: 100%;
-            left: -100%;
-            margin: 0;
-            position: fixed;
-            margin-top: 14%;
-            opacity: 0.7;
-        }
-        header nav ul li {
-            display: block;
-            float: none;
-        }
-        .menu_bar {
-            display: block;
-            width: auto;
-        }
-        .menu_bar .bt-menu {
-            display: block;
-            padding: 20px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 25px;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            width: 100%;
-        }
-        .user-mail {
-            margin-top: 20%;
-        }
-        .user-mail p {
-            color: #fff;
-            font-size: 11px;
-        }
-        .menu_bar span {
-            float: right;
-            font-size: 40px;
-        }
-        .bt-menu:hover {
-            color: rgb(241, 219, 198);
-        }
-    }
-    /************************************************************************************/
-    
-    @media screen and (max-width:479px) {
-        .view-viewport {
-            height: 100%;
-            width: 100%;
-        }
-        .col-12 {
-            position: relative;
-        }
-        .col-6 {
-            float: left;
-            width: 50%;
-            position: relative;
-        }
-        .col-4 {
-            width: 33%;
-            float: left;
-            text-align: center;
-        }
-        html,
-        body {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-decoration: none;
-            box-sizing: border-box;
-            font-family: "Roboto", "Lucida Sans Unicode", Arial, sans-serif;
-        }
-        body {
-            padding-top: 55px;
-        }
-        /***************************************** PANTALLA PRINCIPAL *****************************************/
-        .principalColorful {
-            height: 100%;
-            position: relative;
-            width: 100%;
-            background: -webkit-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7)), url(../src/background-main1-1.png);
-            background: -moz-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7)), url(../src/background-main1-1.png);
-            background: linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7)), url(../src/background-main1-1.png);
-            text-align: center;
-            color: white;
-        }
-        .fila-title {
-            height: 33%;
-            position: relative;
-            width: inherit;
-        }
-        .fila-entry {
-            height: 20%;
-            position: relative;
-            width: inherit;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10%;
-        }
-        .title-main {
-            font-size: 350%;
-            font-weight: bold;
-            padding-top: 25%;
-        }
-        .info-main {
-            font-size: 120%;
-            padding: 25% 15% 0% 15%;
-        }
-        .users-bottons,
-        .users-bottons-type,
-        .users-bottons-housing {
-            padding: 1em 3em;
-            box-shadow: 0 3px 0 #cc632a;
-            background-color: #e58450;
-            border: 0;
-            border-radius: 10%;
-            color: white;
-            font-family: "Roboto", "Lucida Sans Unicode", Arial, sans-serif;
-            font-size: 100%;
-        }
-        .users-bottons-type {
-            padding: 8%;
-            width: 80%;
-        }
-        .users-bottons-housing {
-            padding: 4%;
-            width: 30%;
-            font-size: 80%;
-        }
-        .users-bottons:hover {
-            background-color: #e29166;
-        }
-        /**************************************** INFO GENERAL *******************************************/
-        .principal-info {
-            height: 100%;
-            position: relative;
-            width: 100%;
-            background: rgb(255, 255, 255);
-            text-align: center;
-            font-family: "Helvetica Neue", "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-            color: #3596C9;
-            font-variant: small-caps;
-        }
-        .fila-info {
-            float: left;
-            margin-top: 5%;
-        }
-        .info-title {
-            font-size: 250%;
-            float: left;
-            margin-top: 5%;
-            width: 100%;
-        }
-        .info {
-            font-size: 140%;
-            float: left;
-        }
-        .fila-info-img {
-            float: left;
-            margin-top: 10%;
-        }
-        .info-home {
-            width: 80%;
-        }
-        /************************************************* INFO PARA PROPIETARIOS *************************************************/
-        .principalColor {
-            height: 100%;
-            background: -webkit-linear-gradient(145deg, rgba(77, 195, 224, 0.85), rgba(20, 68, 100, 0.7));
-            background: -moz-linear-gradient(145deg, rgba(77, 195, 224, 0.85), rgba(20, 68, 100, 0.7));
-            background: linear-gradient(145deg, rgba(77, 195, 224, 0.85), rgba(20, 68, 100, 0.7));
-        }
-        .info-title-owners {
-            text-align: center;
-            font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-            font-size: 200%;
-            color: rgb(247, 244, 244);
-            font-weight: bold;
-            text-decoration: none solid rgb(68, 68, 68);
-            font-style: normal;
-            font-variant: small-caps;
-            text-transform: none;
-            position: relative;
-            float: left;
-            margin-left: 7%;
-            margin-top: 7%;
-            margin-bottom: 10%;
-        }
-        .fila-info-owners {
-            text-align: center;
-            position: relative;
-            width: 100%;
-            vertical-align: middle;
-            float: left;
-            height: 25%;
-        }
-        .info-owners {
-            text-align: center;
-            font-family: "Source Sanz Pro", sans-serif;
-            font-size: 120%;
-            color: rgb(247, 244, 244);
-            text-decoration: none solid rgb(68, 68, 68);
-            font-style: normal;
-            font-variant: small-caps;
-            opacity: 0.9;
-            text-transform: none;
-            position: relative;
-            float: left;
-            margin: 5% 4% 5% 5%;
-        }
-        .img-owners {
-            position: relative;
-        }
-        .info-owners-img {
-            text-align: center;
-            width: 60%;
-            height: 70%;
-            position: relative;
-            float: left;
-            margin-left: 20%;
-        }
-        /************************************************* CIUDADES *************************************************/
-        .principal-cities {
-            height: 90%;
-            position: relative;
-            margin: auto;
-            width: 100%;
-            background: -webkit-linear-gradient(145deg, rgba(206, 206, 206, 0.85), rgba(104, 105, 105, 0.7)), url(../src/fondoviajesmovil.png);
-            background: -moz-linear-gradient(145deg, rgba(206, 206, 206, 0.85), rgba(104, 105, 105, 0.7)), url(../src/fondoviajesmovil.png);
-            background: linear-gradient(145deg, rgba(206, 206, 206, 0.85), rgba(104, 105, 105, 0.7)), url(../src/fondoviajesmovil.png);
-        }
-        .info-title-cities {
-            text-align: center;
-            font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-            font-size: 200%;
-            color: rgb(45, 125, 168);
-            font-variant: small-caps;
-            text-transform: none;
-            margin-bottom: 5%;
-            padding-top: 5%;
-            width: 100%;
-        }
-        .fila-info-cities {
-            text-align: center;
-            position: relative;
-            width: 100%;
-            float: left;
-            background: -webkit-linear-gradient(10deg, rgba(255, 255, 255, 0.85), rgba(196, 188, 188, 0.7));
-            background: -moz-linear-gradient(100deg, rgba(160, 156, 156, 0.85), rgba(196, 188, 188, 0.7));
-            background: linear-gradient(45deg, rgba(236, 229, 229, 0.85), rgba(175, 170, 170, 0.7));
-            opacity: 0.8;
-            margin-bottom: 10%;
-            border-radius: 2%
-        }
-        .info-cities {
-            font-family: "Roboto", sans-serif;
-            font-weight: 200;
-            font-size: 80%;
-            color: rgb(38, 103, 138);
-            font-variant: small-caps;
-            text-transform: none;
-            position: relative;
-            float: left
-        }
-        .info-cities-img {
-            text-align: center;
-            width: 90%;
-            height: 130px;
-            position: relative;
-            float: left;
-            margin-right: 2%;
-            margin-bottom: 2%;
-            border-radius: 5%;
-            border: 2px solid rgb(62, 166, 223);
-        }
-        .border {
-            width: 100%;
-            margin: 2% 0% 5% 5%;
-            position: relative;
-        }
-        /***************************************** FOOTER DE CONTACTO *****************************************/
-        .contact {
-            height: 20%;
-            background: rgb(7, 40, 66);
-            color: rgb(222, 227, 231);
-            font-family: "Roboto", "Source Sanz Pro", sans-serif;
-            font-size: 13px;
-        }
-        .fila-footer {
-            position: relative;
-            float: left;
-            width: 100%;
-        }
-        .contact-info {
-            color: white;
-        }
-        .derechos {
-            width: 100%;
-            font-size: 10px;
-            text-align: center;
-        }
-        .col-contact {
-            position: relative;
-            margin-top: 3%;
-        }
-        /************************************************* LOGIN *************************************************/
-        .principalLogin {
-            background: -webkit-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7));
-            background: -moz-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7));
-            background: linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7));
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        .fila-info-login {
-            text-align: center;
-            position: relative;
-            height: 150px;
-            width: 100%;
-            float: left;
-        }
-        .info-login-img {
-            text-align: center;
-            width: 100%;
-            margin: 0px auto;
-        }
-        .button {
-            color: white;
-            font-family: "Source Sanz Pro", sans-serif;
-        }
-        .message-login {
-            text-align: center;
-            font-family: "Source Sanz Pro", sans-serif;
-            font-size: 80%;
-            color: rgb(247, 244, 244);
-            text-decoration: none solid rgb(68, 68, 68);
-            font-style: normal;
-            font-variant: small-caps;
-            opacity: 0.9;
-            text-transform: none;
-            position: relative;
-            float: left;
-            margin-left: 5%;
-            margin-right: 5%;
-            margin-top: 5%;
-        }
-        /***************************************** SIGN UP *****************************************/
-        .principalSignup {
-            background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
-            background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
-            background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
-            display: flex;
-            flex-direction: column;
-        }
-        .title-signup {
-            text-align: center;
-            font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-            font-size: 300%;
-            color: rgb(247, 244, 244);
-            font-weight: bold;
-            text-decoration: none solid rgb(68, 68, 68);
-            font-variant: small-caps;
-            position: relative;
-            padding-top: 20%;
-            width: 100%;
-            height: auto;
-        }
-        .fila-form-signup {
-            text-align: center;
-            position: relative;
-            vertical-align: middle;
-            height: auto;
-            width: 100%;
-            float: left;
-            text-align: center;
-            padding-left: 2%;
-            padding-bottom: 5%;
-        }
-        .signup {
-            font-family: "Source Sanz Pro", sans-serif;
-            font-size: 100%;
-            color: rgb(247, 244, 244);
-            text-decoration: none solid rgb(68, 68, 68);
-            position: relative;
-            float: left;
-            height: auto;
-            width: 100%;
-            background: transparent;
-        }
-        .signup_form {
-            border-radius: 5px;
-            background-color: #def;
-            width: 60%;
-            height: 50px;
-            border: 1px solid #ffffff;
-            margin-bottom: 5%;
-        }
-        .form-signup h5 {
-            font-size: 100%;
-        }
-        .radio-signup {
-            font-family: "Source Sanz Pro", sans-serif;
-            font-size: 120%;
-            color: rgb(247, 244, 244);
-            margin-top: 10%;
-            margin-bottom: 10%;
-        }
-        .signup-button {
-            color: white;
-            font-family: "Source Sanz Pro", sans-serif;
-            margin-top: 40%;
-        }
-        /***************************************** FORGET PASSWORD *****************************************/
-        .principalForget {
-            height: 100%;
-            background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
-            background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
-            background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
-            display: flex;
-            flex-direction: column;
-        }
-        .title-signup {
-            text-align: center;
-            font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-            font-size: 200%;
-            color: rgb(247, 244, 244);
-            font-weight: bold;
-            text-decoration: none solid rgb(68, 68, 68);
-            font-variant: small-caps;
-            position: relative;
-            padding-top: 20%;
-            padding-bottom: 10%;
-            width: 100%;
-            height: auto;
-        }
-        .fila-form-forget {
-            text-align: center;
-            position: relative;
-            vertical-align: middle;
-            height: auto;
-            width: 100%;
-            float: left;
-            margin-top: -10%;
-        }
-        /***************************************** PANTALLA USUARIOS *****************************************/
-        .position-buttonuser {
-            margin-top: 5%;
-        }
-        /***************************************** OPCIONES TRAVELLERS *****************************************/
-        /***************************************** BUSCAR CIUDAD *****************************************/
-        .cities-list {
-            position: relative;
-            width: 100%;
-            background: -webkit-linear-gradient(145deg, rgba(216, 216, 216, 0.85), rgba(232, 234, 235, 0.7));
-            background: -moz-linear-gradient(145deg, rgba(216, 216, 216, 0.85), rgba(232, 234, 235, 0.7));
-            background: linear-gradient(145deg, rgba(216, 216, 216, 0.85), rgba(232, 234, 235, 0.7));
-            display: flex;
-            text-align: center;
-            font-family: "Helvetica Neue", "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-            color: black;
-            font-variant: small-caps;
-            flex-direction: column;
-        }
-        .looking {
-            margin-top: 10%;
-            position: relative;
-            border: orange;
-            background: rgb(195, 221, 245);
-        }
-        .housing-list {
-            width: 100%;
-        }
-        .house-file {
-            width: 100%;
-            background: rgb(240, 240, 240);
-            margin-bottom: 2%;
-            float: left;
-            border-radius: 5%;
-        }
-        .image-listhouse {
-            width: 100%;
-            position: relative;
-            float: left;
-            margin-top: 4%;
-            height: auto;
-        }
-        .listhousing-img {
-            width: 150px;
-            height: 140px;
-            border-radius: 5%;
-        }
-        .info-house {
-            height: auto;
-            position: relative;
-            justify-content: center;
-            align-items: center;
-            font-size: 13px;
-        }
-        .name-house {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 2% 0% 2% 0%;
-        }
-        .address-house {
-            font-size: 13px;
-            margin: 2% 0% 2% 0%;
-        }
-        .city-house {
-            text-align: left;
-            font-weight: bold;
-            margin: 5% 0% 2% 0%;
-            width: 100%;
-        }
-        .description-house {
-            font-size: 80%;
-            height: auto;
-            padding-right: 2%;
-            width: 100%;
-            position: relative;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            float: left;
-        }
-        .looking-cities {
-            width: 100%;
-            position: relative;
-            float: right;
-        }
-        /***************************************** RESERVAR *****************************************/
-        .principalBook {
-            background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
-            background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
-            background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
-            display: flex;
-            position: relative;
-            float: left;
-            flex-direction: column;
-        }
-        .info-files {
-            background: rgb(238, 237, 237);
-            position: relative;
-            float: left;
-        }
-        .description-book {
-            font-size: 80%;
-            height: 3.5em;
-            padding-right: 2%;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            float: left;
-        }
-        .title-book {
-            width: 100%;
-            text-align: center;
-            font-family: "Helvetica Neue", "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-            font-variant: small-caps;
-        }
-    }
-    /*Correccion de estilos para distintos tipos de moviles*/
-    
-    @media screen and (max-width:390px) {
-        .info-cities-img {
-            height: 100px;
-        }
-        .principal-cities {
-            height: 90%;
-        }
-    }
-    
-    @media screen and (max-width:330px) {
-        .info-cities-img {
-            height: 100px;
-        }
-        .principal-cities {
-            height: 100%;
-        }
-    }
-    /********************************* ESTILOS PARA LA VALORACIÓN EN ESTRELLAS *****************************************/
-    
-    .comment {
-        width: 250px;
-        margin: 0 auto;
-        height: 50px;
-    }
-    
-    .comment p {
-        text-align: center;
-    }
-    
-    .comment label {
-        font-size: 20px;
-    }
-    
-    .comment input[type="radio"] {
-        display: none;
-    }
-    
-    .comment label {
-        color: grey;
-    }
-    
-    .clasificacion {
-        direction: rtl;
-        unicode-bidi: bidi-override;
-    }
-    
-    .comment label:hover,
-    .comment label:hover~label {
-        color: orange;
-    }
-    
-    .comment input[type="radio"]:checked~label {
-        color: orange;
-    }
-    /*-- ESTILOS PARA EL CUADRO DE ENVIAR COMENTARIO --*/
-    
-    #comentario {
-        height: 13rem;
-        width: 40rem;
-    }
+            /**************************************************************************************************************/
+            /**************************************************************************************************************/
+            /************************************************* CSS GLOBAL *************************************************/
+            /**************************************************************************************************************/
+            /**************************************************************************************************************/
+            
+            .view-viewport {
+                height: 100%;
+                width: 100%;
+            }
+            
+            .col-12 {
+                width: inherit;
+            }
+            
+            html,
+            body {
+                height: 100%;
+                width: 100%;
+                min-width: 600px;
+                min-width: 500px;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+                font-family: "Roboto", "Lucida Sans Unicode", Arial, sans-serif;
+            }
+            /****************************************** HEADER *******************************************/
+            
+            header {
+                width: 100%;
+                height: 60px;
+                position: fixed;
+                z-index: 3;
+                background: #024959;
+                border-radius: 0% 0% 10% 10%;
+                display: flex;
+            }
+            
+            .fila-header {
+                width: inherit;
+            }
+            
+            .center-header {
+                display: none;
+            }
+            
+            header nav {
+                width: 100%;
+            }
+            
+            header nav ul {
+                overflow: hidden;
+                list-style: none;
+                white-space: nowrap;
+            }
+            
+            header nav ul li {
+                display: block;
+                float: none;
+            }
+            
+            header nav ul li a {
+                color: #fff;
+                padding: 13px;
+                display: block;
+                font-size: 12px;
+                text-decoration: none;
+                float: left;
+                opacity: 0.8;
+            }
+            
+            header nav ul li a:hover {
+                opacity: 1;
+                transition: 0.5s;
+                border-radius: 10%;
+                font-size: 12.5px;
+            }
+            
+            .col-header {
+                display: flex;
+                align-items: center;
+                width: auto;
+            }
+            
+            .email-header {
+                justify-content: center;
+                width: 20%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            
+            .user-mail {
+                justify-content: center;
+                color: #fff;
+                font-size: 12px;
+                opacity: 0.8;
+                margin-top: 10px;
+            }
+            
+            .user-mail:hover {
+                opacity: 1;
+                transition: 0.3s;
+            }
+            
+            .bt-menu:hover {
+                color: rgb(241, 219, 198);
+            }
+            
+            @media screen and (min-width:480px) {
+                /**************************************** PAGINA PRINCIPAL ****************************************/
+                .principalColorful {
+                    height: 100%;
+                    width: 100%;
+                    background: -webkit-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7)), url(../src/background-main1.jpg) no-repeat center fixed;
+                    background: -moz-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7)), url(../src/background-main1.jpg) no-repeat center fixed;
+                    background: linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7)), url(../src/background-main1.jpg) no-repeat center fixed;
+                    background-size: cover;
+                    text-align: center;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .fila-title {
+                    height: 50%;
+                    width: inherit;
+                    display: flex;
+                    align-items: flex-end;
+                }
+                .fila-entry {
+                    height: 70%;
+                    width: inherit;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .title-main {
+                    font-size: 400%;
+                    font-weight: bold;
+                    height: 70px;
+                }
+                .info-main {
+                    font-size: 120%;
+                }
+                .fila-buttons {
+                    display: flex;
+                    margin-top: 15px;
+                    width: 100%;
+                    justify-content: center;
+                }
+                .position-button {
+                    display: flex;
+                    margin: 10px;
+                }
+                .users-buttons,
+                .users-buttons-type,
+                .users-buttons-housing,
+                .users-buttons-choose-housing {
+                    padding: 0.5em 3.5em;
+                    box-shadow: 0 3px 0 #cc632a;
+                    background-color: #e58450;
+                    border: 0;
+                    border-radius: 10%;
+                    color: white;
+                    font-family: "Roboto", "Lucida Sans Unicode", Arial, sans-serif;
+                    font-size: 100%;
+                    margin: 30px;
+                }
+                .users-buttons,
+                .users-buttons-type,
+                .users-buttons-housing,
+                .users-buttons-choose-housing {
+                    background-color: #e29166;
+                }
+                .users-buttons-type {
+                    padding: 15px;
+                    width: 80%;
+                    margin: 10px;
+                }
+                .users-buttons-housing {
+                    padding: 4%;
+                    width: 50%;
+                }
+                /**************************************** INFO GENERAL *******************************************/
+                .principal-info {
+                    width: 100%;
+                    height: 80%;
+                    background: white;
+                    text-align: center;
+                    font-family: "Helvetica Neue", "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    color: grey;
+                    font-variant: small-caps;
+                    display: flex;
+                }
+                .zone {
+                    width: 35%;
+                    height: 100%;
+                }
+                .zone-blue,
+                .zone-blue2 {
+                    width: 10%;
+                    background: -webkit-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(23, 143, 173, 0.85));
+                    background: -moz-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(23, 143, 173, 0.85));
+                    background: linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(23, 143, 173, 0.85));
+                    opacity: 0.8;
+                    position: absolute;
+                    height: 80%;
+                    transition: all 1s;
+                    left: -100%;
+                }
+                .zone-blue {
+                    margin-left: 150px;
+                }
+                .zone-orange,
+                .zone-orange2 {
+                    left: -100%;
+                    width: 10%;
+                    background: #f2a900;
+                    position: absolute;
+                    height: 80%;
+                }
+                .zone-orange {
+                    margin-left: 20%;
+                    width: 8%;
+                }
+                .zone-green {
+                    width: 7%;
+                    background: #009a44;
+                    position: absolute;
+                    height: 80%;
+                    margin-left: 80px;
+                    left: -100%;
+                }
+                .zone-text {
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 5%;
+                }
+                .fila-header,
+                .info-title,
+                .fila-info,
+                .fila-info-img,
+                .owner-title,
+                .fila-info-owners,
+                .text-info,
+                .title-cities,
+                .fila-info-cities,
+                .cities,
+                .fila-footer {
+                    width: inherit;
+                    display: flex;
+                    align-items: center;
+                }
+                .content-info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 100%;
+                }
+                .info-title {
+                    height: 80px;
+                    width: 100%;
+                }
+                .top-title {
+                    font-size: 250%;
+                    height: 40px;
+                    color: rgb(65, 65, 65);
+                }
+                .fila-info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .info {
+                    font-size: 140%;
+                }
+                .fila-info-img {
+                    width: 100%;
+                    height: 100%;
+                }
+                .info-home {
+                    width: 300px;
+                }
+                /************************************************* INFO PARA PROPIETARIOS *************************************************/
+                .principalColor {
+                    height: 100%;
+                    background: -webkit-linear-gradient(145deg, rgba(77, 195, 224, 0.85), rgba(20, 68, 100, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(77, 195, 224, 0.85), rgba(20, 68, 100, 0.7));
+                    background: linear-gradient(145deg, rgba(77, 195, 224, 0.85), rgba(20, 68, 100, 0.7));
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    color: rgb(247, 244, 244);
+                    text-decoration: none solid rgb(68, 68, 68);
+                    font-style: normal;
+                    font-variant: small-caps;
+                    text-transform: none;
+                }
+                .owner-title {
+                    height: 100px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+                .info-title-owners {
+                    font-size: 200%;
+                    font-weight: bold;
+                    height: 50px;
+                }
+                .fila-info-owners {
+                    height: 250px;
+                }
+                .text-info {
+                    height: 150px;
+                    width: 50%;
+                    flex-direction: column;
+                }
+                .center-info {
+                    height: inherit;
+                    width: 120px;
+                    flex-direction: row;
+                }
+                .info-owners {
+                    font-family: "Source Sanz Pro", sans-serif;
+                    font-size: 130%;
+                    opacity: 0.9;
+                    height: 120px;
+                    width: 120px;
+                }
+                .info-owners-img {
+                    align-items: center;
+                    width: 110px;
+                    height: 110px;
+                }
+                /************************************************* CIUDADES *************************************************/
+                .principal-cities {
+                    width: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    text-transform: none;
+                    font-variant: small-caps;
+                    background: -webkit-linear-gradient(145deg, rgba(206, 206, 206, 0.85), rgba(104, 105, 105, 0.7)), url(../src/fondoviajesmovil.png);
+                    background: -moz-linear-gradient(145deg, rgba(206, 206, 206, 0.85), rgba(104, 105, 105, 0.7)), url(../src/fondoviajesmovil.png);
+                    background: linear-gradient(145deg, rgba(206, 206, 206, 0.85), rgba(104, 105, 105, 0.7)), url(../src/fondoviajesmovil.png);
+                }
+                .title-cities {
+                    height: 80px;
+                    text-align: center;
+                }
+                .info-title-cities {
+                    font-size: 200%;
+                    color: rgb(45, 125, 168);
+                    height: 40px;
+                    width: inherit;
+                }
+                .fila-info-cities {
+                    background: -webkit-linear-gradient(10deg, rgba(255, 255, 255, 0.85), rgba(196, 188, 188, 0.7));
+                    background: -moz-linear-gradient(100deg, rgba(160, 156, 156, 0.85), rgba(196, 188, 188, 0.7));
+                    background: linear-gradient(45deg, rgba(236, 229, 229, 0.85), rgba(175, 170, 170, 0.7));
+                    opacity: 0.8;
+                    border-radius: 2%;
+                    height: 150px;
+                }
+                .cities {
+                    height: 150px;
+                    width: 50%;
+                    flex-direction: column;
+                }
+                .center-cities {
+                    height: inherit;
+                    width: 95%;
+                    flex-direction: row;
+                }
+                .info-cities {
+                    font-family: "Source Sanz Pro", sans-serif;
+                    font-size: 140%;
+                    opacity: 0.9;
+                    height: 120px;
+                    width: 100%;
+                }
+                .name-cities {
+                    font-weight: 200;
+                    font-size: 80%;
+                    color: rgb(38, 103, 138);
+                }
+                .name-cities-img {
+                    text-align: center;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 5%;
+                    border: 2px solid rgb(62, 166, 223);
+                }
+                /***************************************** FOOTER DE CONTACTO *****************************************/
+                .contact {
+                    height: 15%;
+                    background: rgb(7, 40, 66);
+                    color: rgb(222, 227, 231);
+                    font-family: "Roboto", "Source Sanz Pro", sans-serif;
+                    font-size: 13px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .fila-footer {
+                    width: 100%;
+                }
+                .center-contact {
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .col-contact {
+                    width: 90%;
+                    display: flex;
+                }
+                .contact-info {
+                    color: white;
+                }
+                .derechos {
+                    width: 100%;
+                    font-size: 10px;
+                    text-align: center;
+                }
+                /************************************************* LOGIN *************************************************/
+                .principalLogin {
+                    background: -webkit-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7));
+                    background: linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7));
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+                .title-login {
+                    text-align: center;
+                    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    font-size: 200%;
+                    color: rgb(247, 244, 244);
+                    font-weight: bold;
+                    text-decoration: none solid rgb(68, 68, 68);
+                    font-variant: small-caps;
+                    text-align: center;
+                    align-items: center;
+                    height: 150px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .position-title-login {
+                    height: 10%;
+                    justify-content: flex-end;
+                }
+                .fila-info-login {
+                    text-align: center;
+                    height: 180px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+                .info-position-img {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                }
+                .info-login-img {
+                    text-align: center;
+                    width: 150px;
+                    margin: 0px auto;
+                }
+                .select-user {
+                    display: flex;
+                    color: white;
+                    height: 30px;
+                    justify-content: center;
+                }
+                .send {
+                    display: flex;
+                    justify-content: center;
+                }
+                .button {
+                    color: white;
+                    font-family: "Source Sanz Pro", sans-serif;
+                }
+                .fila-login-others {
+                    display: flex;
+                    text-align: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .position-login-others,
+                .position-signup-others {
+                    display: flex;
+                    height: 100px;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                .message-login {
+                    text-align: center;
+                    font-family: "Source Sanz Pro", sans-serif;
+                    font-size: 80%;
+                    color: rgb(247, 244, 244);
+                    text-decoration: none solid rgb(68, 68, 68);
+                    font-style: normal;
+                    font-variant: small-caps;
+                    opacity: 0.9;
+                    text-transform: none;
+                }
+                /***************************************** SIGN UP *****************************************/
+                .principal {
+                    display: flex;
+                    flex-direction: column;
+                    width: inherit;
+                }
+                .totalSignup {
+                    display: flex;
+                    flex-direction: column;
+                    width: inherit;
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                }
+                .title-signup {
+                    text-align: center;
+                    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    font-size: 200%;
+                    color: rgb(247, 244, 244);
+                    font-weight: bold;
+                    text-decoration: none solid rgb(68, 68, 68);
+                    font-variant: small-caps;
+                    text-align: center;
+                    align-items: center;
+                    height: 150px;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .center-title-signup {
+                    display: flex;
+                    height: inherit;
+                    align-items: flex-end;
+                }
+                .info-title-signup {
+                    height: 60px;
+                }
+                .fila-form-signup {
+                    text-align: center;
+                }
+                .signup {
+                    font-family: "Source Sanz Pro", sans-serif;
+                    font-size: 100%;
+                    color: rgb(247, 244, 244);
+                    text-decoration: none solid rgb(68, 68, 68);
+                }
+                .signup_form {
+                    border-radius: 5px;
+                    background-color: #def;
+                    width: 60%;
+                    height: 50px;
+                    border: 1px solid #ffffff;
+                }
+                .form-signup {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .form-signup h5 {
+                    font-size: 100%;
+                    color: white;
+                }
+                .position-signup-others {
+                    width: 100%;
+                }
+                .radio-buttons {
+                    display: flex;
+                    height: 50px;
+                    justify-content: center;
+                    color: rgb(247, 244, 244);
+                }
+                .radio-signup {
+                    font-family: "Source Sanz Pro", sans-serif;
+                    font-size: 120%;
+                }
+                .signup-button {
+                    color: white;
+                    font-family: "Source Sanz Pro", sans-serif;
+                }
+                /***************************************** FORGET PASSWORD *****************************************/
+                .principalForget {
+                    height: 100%;
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    display: flex;
+                    flex-direction: column;
+                }
+                .fila-form-forget {
+                    text-align: center;
+                    vertical-align: middle;
+                    height: auto;
+                    width: 100%;
+                }
+                /***************************************** PANTALLA USUARIOS *****************************************/
+                .principal-all {
+                    display: flex;
+                    flex-direction: column;
+                    width: inherit;
+                    min-height: 100%;
+                }
+                /***************************************** OPCIONES TRAVELLERS *****************************************/
+                /***************************************** BUSCAR CIUDAD *****************************************/
+                .searcher-position {
+                    display: flex;
+                    flex-direction: column;
+                    height: 170px;
+                }
+                .looking-city {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    height: 180px;
+                }
+                .searcher {
+                    height: 50px;
+                    display: flex;
+                    align-items: flex-end;
+                }
+                .position-form {
+                    height: 50px;
+                    align-items: center;
+                    text-align: center;
+                    width: 100%;
+                    color: white;
+                }
+                .button-searcher {
+                    align-items: center;
+                }
+                .looking {
+                    border: orange;
+                    background: rgb(195, 221, 245);
+                }
+                /**********************************/
+                .my-housing-list {
+                    display: flex;
+                    height: 70px;
+                }
+                .house-file {
+                    width: 100%;
+                    background: rgb(255, 255, 255);
+                    margin: 10px 0;
+                    border-radius: 3%;
+                    border: blue;
+                    height: 200px;
+                }
+                .house-file-zone {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                }
+                .image-listhouse {
+                    width: 100%;
+                    height: auto;
+                    margin-left: 5px;
+                }
+                .listhousing-img {
+                    width: 150px;
+                    height: 140px;
+                    border-radius: 5%;
+                }
+                .info-house {
+                    font-size: 13px;
+                    margin: 10px;
+                    text-align: left;
+                    height: 100%;
+                }
+                .name-house {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin: 5px;
+                }
+                .details-house {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .address-house {
+                    font-size: 13px;
+                    margin: 0px 0px 10px 0px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .city-house {
+                    text-align: left;
+                    font-weight: bold;
+                    width: 100%;
+                    margin: 10px;
+                }
+                .description-house {
+                    font-size: 100%;
+                    height: 100%;
+                    width: 100%;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                #reservar {
+                    margin-right: 5px;
+                }
+                .looking-cities {
+                    width: 100%;
+                    text-align: right;
+                    margin: 10px
+                }
+                /***************************************** RESERVAR *****************************************/
+                .principalBooking {
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    display: flex;
+                    flex-direction: column;
+                    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    height: 100%;
+                }
+                .info-files {
+                    background: rgb(238, 237, 237);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+                .position-title-book {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    height: 180px;
+                }
+                .title-book {
+                    height: 50px;
+                    font-size: 200%;
+                    text-align: center;
+                    font-weight: bold;
+                    color: white
+                }
+                .subtitle-book {
+                    height: 40px;
+                    color: white
+                }
+                .imagen-book {
+                    display: flex;
+                    height: 300px;
+                    border: 1px solid orange;
+                    border-radius: 5%;
+                }
+                .image-book {
+                    border-radius: 5%;
+                    max-width: 100%;
+                }
+                .size-description-book {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100px;
+                    align-items: center;
+                }
+                .position-description-book {
+                    display: flex;
+                    justify-content: center;
+                    width: 95%;
+                }
+                .description-book {
+                    font-size: 80%;
+                    text-align: justify;
+                    height: 100%;
+                    color: white;
+                }
+                .comentarios {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+                .comentarios-file {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 15px;
+                    background: white;
+                    border: 1px solid orange;
+                    border-radius: 5%;
+                }
+                .comentarios-up {
+                    display: flex;
+                    background: rgb(218, 215, 215);
+                    border-radius: 20%;
+                }
+                .comentarios-assessment {
+                    display: flex;
+                    width: 50%;
+                    font-size: 12px;
+                    margin-left: 2%;
+                }
+                .comentarios-assessment-styles {
+                    color: #024959;
+                }
+                .comentarios-name {
+                    display: flex;
+                    width: 48%;
+                    justify-content: flex-end;
+                    font-size: 10px;
+                }
+                .comentarios-name-styles {
+                    color: #024959;
+                    font-weight: bold;
+                }
+                .comentarios-down {
+                    display: flex;
+                    width: inherit;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 40px;
+                }
+                .comentarios-content {
+                    display: flex;
+                    height: auto;
+                    width: 98%;
+                    word-wrap: break-word;
+                    text-align: justify;
+                    flex-direction: column;
+                    font-style: italic;
+                    font-size: 12px;
+                }
+                .dates {
+                    display: flex;
+                    height: 160px;
+                    width: 100%;
+                }
+                .checks {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    margin: 5px 10px;
+                    color: white
+                }
+                .books-buttons {
+                    margin: 10px;
+                }
+                /********************************* ELIMINAR CUENTA *****************************************/
+                .principalDelete {
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    display: flex;
+                    flex-direction: column;
+                    width: inherit;
+                    height: 100%;
+                }
+                .delete-advice {
+                    height: 40px;
+                    font-weight: bolder;
+                    color: white;
+                    text-align: center;
+                }
+                /***************************************** OPCIONES OWNERS *****************************************/
+                /***************************************** INSERTAR/EDITAR VIVIENDA *****************************************/
+                .principal-house-form {
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    min-height: 100%;
+                    max-height: 1000%;
+                }
+                .house-form {
+                    text-align: center;
+                    height: 100%;
+                }
+                .textbox-description {
+                    width: 300px;
+                    height: 80px;
+                }
+                /********************************* VER CASAS *****************************************/
+                .choose-buttons {
+                    display: flex;
+                    height: 30px;
+                    justify-content: center;
+                    margin: 10px 0px 0px 0px;
+                }
+                .fila-choose-buttons {
+                    display: flex;
+                    justify-content: center;
+                    width: 50%;
+                }
+                #editar,
+                #eliminar {
+                    width: 100%;
+                }
+                /********************************* VER RESERVAS *****************************************/
+                .mybookings {
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    display: flex;
+                    flex-direction: column;
+                    width: inherit;
+                    min-height: 100%;
+                    max-height: 1000%;
+                }
+                .my-booking-top {
+                    display: flex;
+                    height: 70px;
+                }
+                .booking-list {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+                .image-listbook {
+                    width: 60%;
+                    height: 80%;
+                    display: flex;
+                    justify-content: center;
+                }
+                .listbooking-img {
+                    width: 95%;
+                    border-radius: 5%;
+                }
+                .info-book {
+                    height: auto;
+                    font-size: 11px;
+                    margin: 3px;
+                    text-align: left;
+                }
+                .name-house-book {
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin: 5px;
+                }
+                .checks-book {
+                    text-align: left;
+                    font-weight: bold;
+                    width: 100%;
+                    margin: 10px;
+                }
+                .choose-house {
+                    display: flex;
+                    justify-content: center;
+                }
+                .users-buttons-choose-housing {
+                    padding: 4%;
+                    width: 70%;
+                }
+                /********************************* DECIDIR SOBRE RESERVAS *****************************************/
+                .position-title-choose {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    height: 130px;
+                }
+                .show-checks {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                }
+                .background-show-checks {
+                    margin: 10px;
+                    width: 80%;
+                    justify-content: center;
+                    justify-content: row;
+                    background: white;
+                    border-radius: 10%;
+                    border: 1px solid orange;
+                }
+                .traveller-name {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 20px;
+                    color: white
+                }
+                .title-show-checks {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                }
+                .check-names {
+                    margin: 10px 10px 0px 10px;
+                    font-size: 12px;
+                }
+                .check-dates {
+                    margin: 10px 10px 5px 10px;
+                    font-size: 15px;
+                }
+                .goback-button {
+                    margin-left: 10px;
+                    color: white;
+                }
+                /********************************* COMENTARIOS *****************************************/
+                .comment-form {
+                    width: 100%;
+                    min-height: 100%;
+                    max-height: 1000%;
+                }
+                .position-textbox-comment {
+                    display: flex;
+                    width: 100%;
+                }
+                .textbox-comment {
+                    height: 80px;
+                    width: 100%;
+                    margin: 10px;
+                    border: 1px solid orange;
+                }
+                .title-comment {
+                    text-align: center;
+                    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    font-size: 200%;
+                    color: rgb(247, 244, 244);
+                    font-weight: bold;
+                    text-decoration: none solid rgb(68, 68, 68);
+                    font-variant: small-caps;
+                    text-align: center;
+                    align-items: center;
+                    height: 150px;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 5px;
+                }
+                .submit-comment {
+                    display: flex;
+                    justify-content: center;
+                    margin: 20px;
+                }
+                .comentario {
+                    font-size: 20px;
+                }
+            }
+            
+            @media screen and (max-width:800px) {
+                /***************************************** HEADER *****************************************/
+                header {
+                    width: 100%;
+                    height: 60px;
+                    position: fixed;
+                    z-index: 3;
+                    background: #024959;
+                    border-radius: 5%;
+                    display: flex;
+                }
+                .fila-header {
+                    width: inherit;
+                }
+                .center-header {
+                    width: 33.33333%;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .col-header {
+                    display: flex;
+                    align-items: center;
+                    width: auto;
+                }
+                header nav {
+                    width: 45%;
+                    height: 100%;
+                    left: -100%;
+                    margin: 0;
+                    margin-top: 14%;
+                    position: fixed;
+                    opacity: 0.7;
+                }
+                header nav ul li {
+                    display: block;
+                    float: none;
+                }
+                .col-header .bt-menu {
+                    display: block;
+                    padding: 20px;
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 25px;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+                .email-header {
+                    justify-content: center;
+                    width: 33.33333%;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .user-mail {
+                    justify-content: center;
+                    color: #fff;
+                    font-size: 11px;
+                }
+                .col-header span {
+                    float: right;
+                    font-size: 40px;
+                }
+                .bt-menu:hover {
+                    color: rgb(241, 219, 198);
+                }
+            }
+            /************************************************************************************/
+            /* TELEFONOS MOVILES */
+            /************************************************************************************/
+            /************************************************************************************/
+            /* TELEFONOS MOVILES */
+            /************************************************************************************/
+            /************************************************************************************/
+            /* TELEFONOS MOVILES */
+            /************************************************************************************/
+            /************************************************************************************/
+            /* TELEFONOS MOVILES */
+            /************************************************************************************/
+            /************************************************************************************/
+            /* TELEFONOS MOVILES */
+            /************************************************************************************/
+            
+            @media screen and (max-width:479px) {
+                .view-viewport {
+                    height: 100%;
+                    width: 100%;
+                }
+                .col-12 {
+                    width: inherit;
+                }
+                html,
+                body {
+                    height: 100%;
+                    width: 100%;
+                    min-height: 500px;
+                    min-width: 320px;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    text-decoration: none;
+                    box-sizing: border-box;
+                    font-family: "Roboto", "Lucida Sans Unicode", Arial, sans-serif;
+                }
+                /***************************************** PANTALLA PRINCIPAL *****************************************/
+                .principalColorful {
+                    height: 100%;
+                    width: 100%;
+                    background: -webkit-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7)), url(../src/background-main1-2.png);
+                    background: -moz-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7)), url(../src/background-main1-2.png);
+                    background: linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7)), url(../src/background-main1-2.png);
+                    text-align: center;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .fila-title {
+                    height: 90%;
+                    width: inherit;
+                    display: flex;
+                    align-items: center;
+                }
+                .fila-entry {
+                    height: 70%;
+                    width: inherit;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .title-main {
+                    font-size: 350%;
+                    font-weight: bold;
+                    height: 70px;
+                }
+                .info-main {
+                    font-size: 120%;
+                }
+                .fila-buttons {
+                    display: flex;
+                    margin-top: 15px;
+                    width: 100%;
+                    justify-content: center;
+                }
+                .position-button {
+                    display: flex;
+                    margin: 10px;
+                }
+                .users-buttons,
+                .users-buttons-type,
+                .users-buttons-housing,
+                .users-buttons-choose-housing {
+                    padding: 0.5em 2.5em;
+                    box-shadow: 0 3px 0 #cc632a;
+                    background-color: #e29166;
+                    border: 0;
+                    border-radius: 10%;
+                    color: white;
+                    font-family: "Roboto", "Lucida Sans Unicode", Arial, sans-serif;
+                    font-size: 90%;
+                }
+                .users-buttons-type {
+                    padding: 15px;
+                    width: 80%;
+                    margin: 10px;
+                }
+                .users-buttons-housing {
+                    padding: 4%;
+                    width: 50%;
+                }
+                /**************************************** INFO GENERAL *******************************************/
+                .principal-info {
+                    width: 100%;
+                    background: rgb(255, 255, 255);
+                    text-align: center;
+                    font-family: "Helvetica Neue", "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    color: #3596C9;
+                    font-variant: small-caps;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .fila-header,
+                .info-title,
+                .fila-info,
+                .fila-info-img,
+                .owner-title,
+                .fila-info-owners,
+                .text-info,
+                .title-cities,
+                .fila-info-cities,
+                .cities,
+                .fila-footer {
+                    width: inherit;
+                    display: flex;
+                    align-items: center;
+                }
+                .info-title {
+                    height: 80px;
+                }
+                .top-title {
+                    font-size: 250%;
+                    height: 40px;
+                }
+                .fila-info {
+                    height: 160px;
+                }
+                .info {
+                    font-size: 140%;
+                    height: 130px;
+                }
+                .fila-info-img {
+                    height: 300px;
+                }
+                .info-home {
+                    width: 300px;
+                }
+                /************************************************* INFO PARA PROPIETARIOS *************************************************/
+                .principalColor {
+                    height: 100%;
+                    background: -webkit-linear-gradient(145deg, rgba(77, 195, 224, 0.85), rgba(20, 68, 100, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(77, 195, 224, 0.85), rgba(20, 68, 100, 0.7));
+                    background: linear-gradient(145deg, rgba(77, 195, 224, 0.85), rgba(20, 68, 100, 0.7));
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    color: rgb(247, 244, 244);
+                    text-decoration: none solid rgb(68, 68, 68);
+                    font-style: normal;
+                    font-variant: small-caps;
+                    text-transform: none;
+                }
+                .owner-title {
+                    height: 100px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+                .info-title-owners {
+                    font-size: 200%;
+                    font-weight: bold;
+                    height: 50px;
+                }
+                .fila-info-owners {
+                    height: 250px;
+                }
+                .text-info {
+                    height: 150px;
+                    width: 50%;
+                    flex-direction: column;
+                }
+                .center-info {
+                    height: inherit;
+                    width: 120px;
+                    flex-direction: row;
+                }
+                .info-owners {
+                    font-family: "Source Sanz Pro", sans-serif;
+                    font-size: 130%;
+                    opacity: 0.9;
+                    height: 120px;
+                    width: 120px;
+                }
+                .info-owners-img {
+                    align-items: center;
+                    width: 110px;
+                    height: 110px;
+                }
+                /************************************************* CIUDADES *************************************************/
+                .principal-cities {
+                    width: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    text-transform: none;
+                    font-variant: small-caps;
+                    background: -webkit-linear-gradient(145deg, rgba(206, 206, 206, 0.85), rgba(104, 105, 105, 0.7)), url(../src/fondoviajesmovil.png);
+                    background: -moz-linear-gradient(145deg, rgba(206, 206, 206, 0.85), rgba(104, 105, 105, 0.7)), url(../src/fondoviajesmovil.png);
+                    background: linear-gradient(145deg, rgba(206, 206, 206, 0.85), rgba(104, 105, 105, 0.7)), url(../src/fondoviajesmovil.png);
+                }
+                .title-cities {
+                    height: 80px;
+                    text-align: center;
+                }
+                .info-title-cities {
+                    font-size: 200%;
+                    color: rgb(45, 125, 168);
+                    height: 40px;
+                    width: inherit;
+                }
+                .fila-info-cities {
+                    background: -webkit-linear-gradient(10deg, rgba(255, 255, 255, 0.85), rgba(196, 188, 188, 0.7));
+                    background: -moz-linear-gradient(100deg, rgba(160, 156, 156, 0.85), rgba(196, 188, 188, 0.7));
+                    background: linear-gradient(45deg, rgba(236, 229, 229, 0.85), rgba(175, 170, 170, 0.7));
+                    opacity: 0.8;
+                    border-radius: 2%;
+                    height: 150px;
+                }
+                .cities {
+                    height: 150px;
+                    width: 50%;
+                    flex-direction: column;
+                }
+                .center-cities {
+                    height: inherit;
+                    width: 95%;
+                    flex-direction: row;
+                }
+                .info-cities {
+                    font-family: "Source Sanz Pro", sans-serif;
+                    font-size: 140%;
+                    opacity: 0.9;
+                    height: 120px;
+                    width: 100%;
+                }
+                .name-cities {
+                    font-weight: 200;
+                    font-size: 80%;
+                    color: rgb(38, 103, 138);
+                }
+                .name-cities-img {
+                    text-align: center;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 5%;
+                    border: 2px solid rgb(62, 166, 223);
+                }
+                /***************************************** FOOTER DE CONTACTO *****************************************/
+                .contact {
+                    height: 15%;
+                    background: rgb(7, 40, 66);
+                    color: rgb(222, 227, 231);
+                    font-family: "Roboto", "Source Sanz Pro", sans-serif;
+                    font-size: 13px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .fila-footer {
+                    width: 100%;
+                }
+                .center-contact {
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .col-contact {
+                    width: 90%;
+                    display: flex;
+                }
+                .contact-info {
+                    color: white;
+                }
+                .derechos {
+                    width: 100%;
+                    font-size: 10px;
+                    text-align: center;
+                }
+                /************************************************* LOGIN *************************************************/
+                .principalLogin {
+                    background: -webkit-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7));
+                    background: linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(0, 0, 0, 0.7));
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+                .title-login {
+                    text-align: center;
+                    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    font-size: 200%;
+                    color: rgb(247, 244, 244);
+                    font-weight: bold;
+                    text-decoration: none solid rgb(68, 68, 68);
+                    font-variant: small-caps;
+                    text-align: center;
+                    align-items: center;
+                    height: 150px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .position-title-login {
+                    height: 10%;
+                    justify-content: flex-end;
+                }
+                .fila-info-login {
+                    text-align: center;
+                    height: 180px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+                .info-position-img {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                }
+                .info-login-img {
+                    text-align: center;
+                    width: 150px;
+                    margin: 0px auto;
+                }
+                .select-user {
+                    display: flex;
+                    color: white;
+                    height: 30px;
+                    justify-content: center;
+                }
+                .send {
+                    display: flex;
+                    justify-content: center;
+                }
+                .button {
+                    color: white;
+                    font-family: "Source Sanz Pro", sans-serif;
+                }
+                .fila-login-others {
+                    display: flex;
+                    text-align: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .position-login-others,
+                .position-signup-others {
+                    display: flex;
+                    height: 100px;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                .message-login {
+                    text-align: center;
+                    font-family: "Source Sanz Pro", sans-serif;
+                    font-size: 80%;
+                    color: rgb(247, 244, 244);
+                    text-decoration: none solid rgb(68, 68, 68);
+                    font-style: normal;
+                    font-variant: small-caps;
+                    opacity: 0.9;
+                    text-transform: none;
+                }
+                /***************************************** SIGN UP *****************************************/
+                .principal {
+                    display: flex;
+                    flex-direction: column;
+                    width: inherit;
+                }
+                .totalSignup {
+                    display: flex;
+                    flex-direction: column;
+                    width: inherit;
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                }
+                .title-signup {
+                    text-align: center;
+                    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    font-size: 200%;
+                    color: rgb(247, 244, 244);
+                    font-weight: bold;
+                    text-decoration: none solid rgb(68, 68, 68);
+                    font-variant: small-caps;
+                    text-align: center;
+                    align-items: center;
+                    height: 150px;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .center-title-signup {
+                    display: flex;
+                    height: inherit;
+                    align-items: flex-end;
+                }
+                .info-title-signup {
+                    height: 60px;
+                }
+                .fila-form-signup {
+                    text-align: center;
+                }
+                .signup {
+                    font-family: "Source Sanz Pro", sans-serif;
+                    font-size: 100%;
+                    color: rgb(247, 244, 244);
+                    text-decoration: none solid rgb(68, 68, 68);
+                }
+                .signup_form {
+                    border-radius: 5px;
+                    background-color: #def;
+                    width: 60%;
+                    height: 50px;
+                    border: 1px solid #ffffff;
+                }
+                .form-signup {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .form-signup h5 {
+                    font-size: 100%;
+                    color: white;
+                }
+                .position-signup-others {
+                    width: 100%;
+                }
+                .radio-buttons {
+                    display: flex;
+                    height: 50px;
+                    justify-content: center;
+                    color: rgb(247, 244, 244);
+                }
+                .radio-signup {
+                    font-family: "Source Sanz Pro", sans-serif;
+                    font-size: 120%;
+                }
+                .signup-button {
+                    color: white;
+                    font-family: "Source Sanz Pro", sans-serif;
+                }
+                /***************************************** FORGET PASSWORD *****************************************/
+                .principalForget {
+                    height: 100%;
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    display: flex;
+                    flex-direction: column;
+                }
+                .fila-form-forget {
+                    text-align: center;
+                    vertical-align: middle;
+                    height: auto;
+                    width: 100%;
+                }
+                /***************************************** PANTALLA USUARIOS *****************************************/
+                .principal-all {
+                    display: flex;
+                    flex-direction: column;
+                    width: inherit;
+                    min-height: 100%;
+                }
+                /***************************************** OPCIONES TRAVELLERS *****************************************/
+                /***************************************** BUSCAR CIUDAD *****************************************/
+                .searcher-position {
+                    display: flex;
+                    flex-direction: column;
+                    height: 170px;
+                }
+                .looking-city {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    height: 180px;
+                }
+                .searcher {
+                    height: 50px;
+                    display: flex;
+                    align-items: flex-end;
+                }
+                .position-form {
+                    height: 50px;
+                    align-items: center;
+                    text-align: center;
+                    width: 100%;
+                    color: white;
+                }
+                .button-searcher {
+                    align-items: center;
+                }
+                .looking {
+                    border: orange;
+                    background: rgb(195, 221, 245);
+                }
+                /**********************************/
+                .my-housing-list {
+                    display: flex;
+                    height: 70px;
+                }
+                .house-file {
+                    width: 100%;
+                    background: rgb(255, 255, 255);
+                    margin: 10px 0;
+                    border-radius: 3%;
+                    border: blue;
+                    height: 200px;
+                }
+                .house-file-zone {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                }
+                .image-listhouse {
+                    width: 100%;
+                    height: auto;
+                    margin-left: 5px;
+                }
+                .listhousing-img {
+                    width: 150px;
+                    height: 140px;
+                    border-radius: 5%;
+                }
+                .info-house {
+                    font-size: 13px;
+                    margin: 10px;
+                    text-align: left;
+                    height: 100%;
+                }
+                .name-house {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin: 5px;
+                }
+                .details-house {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .address-house {
+                    font-size: 13px;
+                    margin: 0px 0px 10px 0px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .city-house {
+                    text-align: left;
+                    font-weight: bold;
+                    width: 100%;
+                    margin: 10px;
+                }
+                .description-house {
+                    font-size: 100%;
+                    height: 100%;
+                    width: 100%;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                #reservar {
+                    margin-right: 5px;
+                }
+                .looking-cities {
+                    width: 100%;
+                    text-align: right;
+                    margin: 10px
+                }
+                /***************************************** RESERVAR *****************************************/
+                .principalBooking {
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    display: flex;
+                    flex-direction: column;
+                    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    height: 100%;
+                }
+                .info-files {
+                    background: rgb(238, 237, 237);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+                .position-title-book {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    height: 180px;
+                }
+                .title-book {
+                    height: 50px;
+                    font-size: 200%;
+                    text-align: center;
+                    font-weight: bold;
+                    color: white
+                }
+                .subtitle-book {
+                    height: 40px;
+                    color: white
+                }
+                .imagen-book {
+                    display: flex;
+                    height: 300px;
+                    border: 1px solid orange;
+                    border-radius: 5%;
+                }
+                .image-book {
+                    border-radius: 5%;
+                    max-width: 100%;
+                }
+                .size-description-book {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100px;
+                    align-items: center;
+                }
+                .position-description-book {
+                    display: flex;
+                    justify-content: center;
+                    width: 95%;
+                }
+                .description-book {
+                    font-size: 80%;
+                    text-align: justify;
+                    height: 100%;
+                    color: white;
+                }
+                .comentarios {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+                .comentarios-file {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 15px;
+                    background: white;
+                    border: 1px solid orange;
+                    border-radius: 5%;
+                }
+                .comentarios-up {
+                    display: flex;
+                    background: rgb(218, 215, 215);
+                    border-radius: 20%;
+                }
+                .comentarios-assessment {
+                    display: flex;
+                    width: 50%;
+                    font-size: 12px;
+                    margin-left: 2%;
+                }
+                .comentarios-assessment-styles {
+                    color: #024959;
+                }
+                .comentarios-name {
+                    display: flex;
+                    width: 48%;
+                    justify-content: flex-end;
+                    font-size: 10px;
+                }
+                .comentarios-name-styles {
+                    color: #024959;
+                    font-weight: bold;
+                }
+                .comentarios-down {
+                    display: flex;
+                    width: inherit;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 40px;
+                }
+                .comentarios-content {
+                    display: flex;
+                    height: auto;
+                    width: 98%;
+                    word-wrap: break-word;
+                    text-align: justify;
+                    flex-direction: column;
+                    font-style: italic;
+                    font-size: 12px;
+                }
+                .dates {
+                    display: flex;
+                    height: 160px;
+                    width: 100%;
+                }
+                .checks {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    margin: 5px 10px;
+                    color: white
+                }
+                .books-buttons {
+                    margin: 10px;
+                }
+                /********************************* ELIMINAR CUENTA *****************************************/
+                .principalDelete {
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    display: flex;
+                    flex-direction: column;
+                    width: inherit;
+                    height: 100%;
+                }
+                .delete-advice {
+                    height: 40px;
+                    font-weight: bolder;
+                    color: white;
+                    text-align: center;
+                }
+                /***************************************** OPCIONES OWNERS *****************************************/
+                /***************************************** INSERTAR/EDITAR VIVIENDA *****************************************/
+                .principal-house-form {
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    min-height: 100%;
+                    max-height: 1000%;
+                }
+                .house-form {
+                    text-align: center;
+                    height: 100%;
+                }
+                .textbox-description {
+                    width: 300px;
+                    height: 80px;
+                }
+                /********************************* VER CASAS *****************************************/
+                .choose-buttons {
+                    display: flex;
+                    height: 30px;
+                    justify-content: center;
+                    margin: 10px 0px 0px 0px;
+                }
+                .fila-choose-buttons {
+                    display: flex;
+                    justify-content: center;
+                    width: 50%;
+                }
+                #editar,
+                #eliminar {
+                    width: 100%;
+                }
+                /********************************* VER RESERVAS *****************************************/
+                .mybookings {
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    display: flex;
+                    flex-direction: column;
+                    width: inherit;
+                    min-height: 100%;
+                    max-height: 1000%;
+                }
+                .my-booking-top {
+                    display: flex;
+                    height: 70px;
+                }
+                .booking-list {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+                .image-listbook {
+                    width: 60%;
+                    height: 80%;
+                    display: flex;
+                    justify-content: center;
+                }
+                .listbooking-img {
+                    width: 95%;
+                    border-radius: 5%;
+                }
+                .info-book {
+                    height: auto;
+                    font-size: 11px;
+                    margin: 3px;
+                    text-align: left;
+                }
+                .name-house-book {
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin: 5px;
+                }
+                .checks-book {
+                    text-align: left;
+                    font-weight: bold;
+                    width: 100%;
+                    margin: 10px;
+                }
+                .choose-house {
+                    display: flex;
+                    justify-content: center;
+                }
+                .users-buttons-choose-housing {
+                    padding: 4%;
+                    width: 70%;
+                }
+                /********************************* DECIDIR SOBRE RESERVAS *****************************************/
+                .position-title-choose {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    height: 130px;
+                }
+                .show-checks {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                }
+                .background-show-checks {
+                    margin: 10px;
+                    width: 80%;
+                    justify-content: center;
+                    justify-content: row;
+                    background: white;
+                    border-radius: 10%;
+                    border: 1px solid orange;
+                }
+                .traveller-name {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 20px;
+                    color: white
+                }
+                .title-show-checks {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                }
+                .check-names {
+                    margin: 10px 10px 0px 10px;
+                    font-size: 12px;
+                }
+                .check-dates {
+                    margin: 10px 10px 5px 10px;
+                    font-size: 15px;
+                }
+                .goback-button {
+                    margin-left: 10px;
+                    color: white;
+                }
+                /********************************* COMENTARIOS *****************************************/
+                .comment-form {
+                    width: 100%;
+                    min-height: 100%;
+                    max-height: 1000%;
+                }
+                .position-textbox-comment {
+                    display: flex;
+                    width: 100%;
+                }
+                .textbox-comment {
+                    height: 80px;
+                    width: 100%;
+                    margin: 10px;
+                    border: 1px solid orange;
+                }
+                .title-comment {
+                    text-align: center;
+                    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    font-size: 200%;
+                    color: rgb(247, 244, 244);
+                    font-weight: bold;
+                    text-decoration: none solid rgb(68, 68, 68);
+                    font-variant: small-caps;
+                    text-align: center;
+                    align-items: center;
+                    height: 150px;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 5px;
+                }
+                .submit-comment {
+                    display: flex;
+                    justify-content: center;
+                    margin: 20px;
+                }
+                .comentario {
+                    font-size: 20px;
+                }
+            }
+            /********************************* ESTILOS PARA LA VALORACIÓN EN ESTRELLAS *****************************************/
+            
+            .comment p {
+                text-align: center;
+            }
+            
+            .comment label {
+                font-size: 25px;
+                color: white;
+            }
+            
+            .comment input[type="radio"] {
+                display: none;
+            }
+            
+            .clasificacion {
+                direction: rtl;
+                unicode-bidi: bidi-override;
+                display: flex;
+                justify-content: center;
+                margin: 50px;
+            }
+            
+            .clasificacion {
+                color: orange;
+            }
+            
+            .comment label:hover,
+            .comment label:hover~label {
+                color: orange;
+            }
+            
+            .comment input[type="radio"]:checked~label {
+                color: orange;
+            }
+            
+            .stars {
+                display: flex;
+                flex-direction: row;
+                color: orange;
+            }
+            /*IMAGEN QUE AL PONER EL RATON ENCIMA CAMBIA*/
+            
+            @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+            @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+            figure.snip1033 {
+                font-family: 'Raleway', Arial, sans-serif;
+                color: #fff;
+                position: relative;
+                overflow: hidden;
+                margin: 10px;
+                min-width: 220px;
+                max-width: 310px;
+                max-height: 220px;
+                width: 100%;
+                background: #000000;
+            }
+            
+            figure.snip1033 img {
+                opacity: 1;
+                width: 100%;
+                position: relative;
+                -webkit-transition: opacity 0.35s;
+                transition: opacity 0.35s;
+            }
+            
+            figure.snip1033 .center {
+                border-radius: 5px;
+                display: block;
+                content: '';
+                position: absolute;
+                background-color: #000;
+                top: 50%;
+                left: 50%;
+                height: 70px;
+                width: 70px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
+                opacity: 0;
+                text-align: center;
+                -webkit-transform: translate(-50%, -50%) rotate(0deg);
+                transform: translate(-50%, -50%) rotate(0deg);
+                -webkit-transition: all 0.4s;
+                transition: all 0.4s;
+            }
+            
+            figure.snip1033 .center i {
+                font-size: 38px;
+                padding: 6px;
+                color: #ffffff;
+                line-height: 70px;
+                opacity: 0.3;
+            }
+            
+            figure.snip1033 figcaption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                text-align: left;
+            }
+            
+            figure.snip1033 figcaption>div {
+                float: left;
+                height: 100%;
+                overflow: hidden;
+                width: 50%;
+                position: relative;
+            }
+            
+            figure.snip1033 figcaption a {
+                opacity: 0.7;
+            }
+            
+            figure.snip1033 figcaption a:hover {
+                opacity: 1;
+            }
+            
+            figure.snip1033 figcaption h3 {
+                background-color: #222;
+                word-spacing: -0.1em;
+                font-weight: 800;
+                text-transform: uppercase;
+                font-size: 1em;
+                opacity: 0;
+                position: absolute;
+                -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+                transition: opacity 0.45s, -webkit-transform 0.45s, -moz-transform 0.45s, -o-transform 0.45s, transform 0.45s;
+            }
+            
+            figure.snip1033 figcaption .left h3 {
+                border-radius: 5px 0 0 5px;
+                top: 50%;
+                padding: 4px 35px 4px 10px;
+                right: 0;
+                -webkit-transform: translate(100%, 0px);
+                transform: translate(100%, 0px);
+            }
+            
+            figure.snip1033 figcaption .right h3 {
+                border-radius: 0 5px 5px 0;
+                bottom: 50%;
+                padding: 4px 10px 4px 35px;
+                padding-left: 30px;
+                -webkit-transform: translate(-100%, 0px);
+                transform: translate(-100%, 0px);
+            }
+            
+            figure.snip1033 a {
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                position: absolute;
+            }
+            
+            figure.snip1033 .red {
+                background-color: #8c212a;
+            }
+            
+            figure.snip1033 .yellow {
+                background-color: #945600;
+            }
+            
+            figure.snip1033 .white {
+                background-color: #ffffff;
+                color: #444444;
+            }
+            
+            figure.snip1033:hover img,
+            figure.snip1033.hover img {
+                opacity: 0.5;
+            }
+            
+            figure.snip1033:hover figcaption .left h3,
+            figure.snip1033.hover figcaption .left h3 {
+                opacity: 1;
+                -webkit-transform: translate(0%, 0px);
+                transform: translate(0%, 0px);
+            }
+            
+            figure.snip1033:hover figcaption .right h3,
+            figure.snip1033.hover figcaption .right h3 {
+                opacity: 1;
+                -webkit-transform: translate(0%, 0px);
+                transform: translate(0%, 0px);
+            }
+            
+            figure.snip1033:hover .center,
+            figure.snip1033.hover .center {
+                opacity: 1;
+                -webkit-transform: translate(-50%, -50%) rotate(45deg);
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            
+            figure.snip1033:hover .center i,
+            figure.snip1033.hover .center i {
+                -webkit-transform: translate(0%, -10px);
+                transform: translate(0%, -10px);
+            }

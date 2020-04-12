@@ -311,7 +311,7 @@ function showHousing() {
             $usertype = 'traveller';
             $query = "SELECT Housing.ID, Housing.Name_home, Housing.Description, Housing.Address, Housing.City, 
             Housing.Name_img, Housing.ID_owner, Housing.Country FROM Housing WHERE Housing.Name_home LIKE '%$busqueda%' OR Housing.City 
-            LIKE '%$busqueda%' OR Housing.Country LIKE '%$busqueda'";
+            LIKE '%$busqueda%' OR Housing.Country LIKE '%$busqueda%'";
         
         }
     }
@@ -337,28 +337,22 @@ function showHousing() {
                             
         ?>
             <div class="house-file">
-                <div class="col-6">
+                <div class="house-file-zone">
                     <div class="image-listhouse">
                         <img class="listhousing-img" src="View/uploads/<?php echo $datos[5]?>">
                     </div>
-                </div>
-                <div class="col-6">
+                
                     <div class="info-house">
                         <div class="name-house"><?php echo $datos[1]?></div>
                         <div class="details-house">
                             <div class="address-house">
-                                <?php echo 'Dirección: '.$datos[3] ?>
-                            </div>
-                            <div class="city-house">
-                                <?php echo $datos[4].', '.$datos[7] ?>
+                                <?php echo $datos[3].', '.$datos[4].', '.$datos[7] ?>
                             </div>
                             <div class="description-house">
                                 <?php echo $datos[2] ?>
                             </div>
                         </div>
-                    
                    
-                
                     <?php
 
                     if ($usertype == 'traveller'){ 
@@ -374,32 +368,37 @@ function showHousing() {
                             <input type="text" name="pais" value="<?php echo $datos[7]?>" class="input_form" hidden>
                             <input type="text" name="name-img" value="<?php echo $datos[5]?>" class="input_form" hidden>
                             <input type="number" name="idOwner" value="<?php echo $datos[6]?>" class="input_form" hidden>
-                            <input type="submit" value="Reservar" class="users-bottons-housing">
+                            <input type="submit" value="Reservar" class="users-buttons-housing">
                             </form>
                     </div>
      
                     <?php }
 
                     if ($usertype == 'owner'){?>
-
-                        <div class="col-6">
-                        <div id="editar">
-                            <form action="index.php?ow=%209" method="POST" class="looking-cities">                        
-                                <input type="number" name="idHouse" value="<?php echo $datos[0]?>" class="input_form" hidden>
-                                <input type="submit" value="Editar" class="users-bottons-housing">
-                            </form>
+                    <div class="choose-buttons">
+                        <div class="fila-choose-buttons">
+                            <div id="editar">
+                                <form action="index.php?ow=%209" method="POST" class="choose-house">                        
+                                    <input type="number" name="idHouse" value="<?php echo $datos[0]?>" class="input_form" hidden>
+                                    <input type="submit" value="Editar" class="users-buttons-choose-housing">
+                                </form>
+                            </div>
                         </div>
+                        <div class="fila-choose-buttons">
+                            <div id="eliminar">
+                                <form action="index.php?ow=%2011" method="POST" class="choose-house">
+                                    <input type="number" name="idHouse" value="<?php echo $datos[0]?>" class="input_form" hidden>
+                                    <input type="text" name="nameHouse" value="<?php echo $datos[1]?>" class="input_form" hidden>
+                                    <input type="text" name="description" value="<?php echo $datos[2]?>" class="input_form" hidden>
+                                    <input type="text" name="direccion" value="<?php echo $datos[3]?>" class="input_form" hidden>
+                                    <input type="text" name="ciudad" value="<?php echo $datos[4]?>" class="input_form" hidden>
+                                    <input type="text" name="pais" value="<?php echo $datos[7]?>" class="input_form" hidden>
+                                    <input type="text" name="name-img" value="<?php echo $datos[5]?>" class="input_form" hidden>
+                                    <input type="submit" value="Eliminar" class="users-buttons-choose-housing">
+                                </form>
+                            </div>
                         </div>
-                        <div class="col-6">
-                        <div id="eliminar">
-                            <form action="index.php?ow=%2011" method="POST" class="looking-cities">
-                                <input type="number" name="idHouse" value="<?php echo $datos[0]?>" class="input_form" hidden>
-                                <input type="text" name="nameHouse" value="<?php echo $datos[1]?>" class="input_form" hidden>
-                                <input type="text" name="name_img" value="<?php echo $datos[5]?>" class="input_form" hidden>
-                                <input type="submit" value="Eliminar" class="users-bottons">
-                            </form>
-                        </div>
-                        </div>
+                    </div>
                     <?php } ?>
          
                     </div>
@@ -414,7 +413,7 @@ function showHousing() {
 
     } else {
 
-            echo "<h4>No se han encontrado resultados para ese lugar</h4>";
+            echo "<h4 class='message-login'>No se han encontrado resultados para ese lugar</h4>";
 
         } 
         
@@ -424,14 +423,7 @@ function showHousing() {
                         
         <?php
 
-        if (mysqli_query($con, $query)) {
-
-        } else {
-
-            echo "<h4>Se ha producido un error en la consulta</h4>";
-            //var_dump($con);
-
-        }
+        
 
     $con-->close();
 
