@@ -4,8 +4,10 @@
             <div class="title-book"><?php echo $_POST['name']?></div>
             <div class="subtitle-book"><?php echo $_POST['direccion'].' - '.$_POST['ciudad'].', '.$_POST['pais']?></div>
         </div>
-            <div class="imagen-book">
-                <img name="name-img" class="image-book" src="View/uploads/<?php echo $_POST['name-img']?>">
+            <div class="position-imagen-book">
+                <div class="imagen-book">
+                    <img name="name-img" class="imagen-file" src="View/uploads/<?php echo $_POST['name-img']?>">
+                </div>
             </div>
             <div class="size-description-book">
                 <div class="position-description-book">
@@ -14,23 +16,39 @@
             </div>
 
             <?php
-            
-                // Aquí aparecen los comentarios de otros viajeros
-                include "Model/queries/queries_comments.php";
+            // Aquí aparecen los comentarios de otros viajeros
+            include "Model/queries/queries_comments.php";
+
+            if(isset($_POST['idHouse'])){
+
                 showComments($_POST['idHouse']); 
+
+            } else {
+
+                $_POST['idHouse'] = 0;
+                showComments($_POST['idHouse']); 
+
+            }
                 
             ?>
 
-            <div class="dates">
-                <div class="checks">
+            <div class="dates-names">
+                <div class="checks-names">
                     Fecha de entrada
-                <input type="date" id="start" name="trip-start" value="">
                 </div>
-                <div class="checks">
+                <div class="checks-names">
                     Fecha de salida
-                <input type="date" id="end" name="trip-end" value=""><br>
                 </div>
             </div>
+            <div class="dates">
+                <div class="checks-inputs">
+                    <input type="date" id="start" name="trip-start" class="checks" value="">
+                </div>
+                <div class="checks-inputs">
+                    <input type="date" id="end" name="trip-end" class="checks" value=""><br>
+                </div>
+            </div>
+                
         
             <input type="number" name="iDowner" value="<?php echo $_POST['idOwner']?>" class="input_form" hidden>
             <input type="text" name="name" value="<?php echo $_POST['name']?>" class="input_form" hidden>
@@ -41,7 +59,7 @@
             <input type="text" name="name-img" value="<?php echo $_POST['name-img']?>" class="input_form" hidden>
             <div class="books-buttons">
                 <input type="submit" name="submit" value="Enviar" class="users-buttons" id="checkdates">
-                <input type="reset" onclick="location.href='index.php?tr=00'" id="fechas" value="Cancelar" class="users-buttons">
+                <input type="reset" onclick="location.href='index.php?tr=01'" id="fechas" value="Volver" class="users-buttons">
             </div>
             <?php 
         include "Model/queries/queries_bookings.php";

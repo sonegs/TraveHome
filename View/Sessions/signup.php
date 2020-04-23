@@ -1,13 +1,5 @@
 <section class="totalSignup">
-<?php
-                                    
-    if(isset($_POST['submit'])){
-        include "Model/queries/queries_users.php";
-        insertUser();
-                                        
-    } 
 
-    ?>
     <div class="title-signup">
         <div class="center-title-signup">
             <div class="info-title-signup">
@@ -15,7 +7,15 @@
             </div>
         </div>
     </div>
-
+    <?php
+                                    
+                if(isset($_POST['submit'])){
+                    include "Model/queries/queries_users.php";
+                    insertUser();
+                                                                        
+                } 
+                                
+                ?>
             <div class="fila-form-signup">
                 <div class="col-12">
                     <div class="signup">
@@ -31,9 +31,13 @@
                             <h5>Código postal</h5><input type="number" name="cp" value="" class="signup_form" maxlength="6" minlength="5" required><br><br>
                             <h5>Ciudad</h5><input type="text" name="ciudad" value="" class="signup_form" required><br><br>
                             <h5>País</h5><input type="text" name="pais" value="España" class="signup_form" required><br><br>
-                            <div class="radio-buttons">
-                                <input type="radio" name="usertype" value="traveller" class="radio-signup"> Soy un traveller
-                                <input type="radio" name="usertype" value="owner" class="radio-signup" required> Soy un anfitrión<br>
+                            <div class="select-user">
+                                <div class="type-signup">
+                                    <input type="radio" name="usertype" value="traveller" id="traveller-option" class="radio-signup" required> Soy un traveller
+                                </div>
+                                <div class="type-signup">
+                                    <input type="radio" name="usertype" value="owner" id="owner-option" class="radio-signup"> Soy un anfitrión<br>
+                                </div>
                             </div>
                             <div class="send">
                                 <input type="submit" name="submit" value="Crear" class="users-buttons">
@@ -43,7 +47,7 @@
                                     <a href="index.php?nu=%202" class="signup-button">¿Tienes una cuenta? Inicia sesión </a>
                                 </div>
                                 <div class="position-signup-others">
-                                    <a href="index.php" class="button">Volver</a>
+                                    <a href="index.php" class="signup-button">Volver</a>
                                 </div>
                             </div>
                         </form>

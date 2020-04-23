@@ -58,47 +58,47 @@ function sendComment(){
 function showComments($idHousing){
 
     include "Model/DDBB/connection.php";
-
-    $queryComment = "SELECT Comments.ID, Comments.Assessment, Comments.Content, Travellers.Name FROM Comments, Travellers WHERE ID_housing = $idHousing AND Travellers.ID = Comments.ID_traveller";
-    $doQueryComment = mysqli_query($con, $queryComment);
-    
-    while ($comentarios = mysqli_fetch_row($doQueryComment)) { ;//PONER AQUI EL FORMATO EN EL QEU APARECEN LOS COMENTARIOS ?>
+   
+        $queryComment = "SELECT Comments.ID, Comments.Assessment, Comments.Content, Travellers.Name FROM Comments, Travellers WHERE ID_housing = $idHousing AND Travellers.ID = Comments.ID_traveller";
+        $doQueryComment = mysqli_query($con, $queryComment);
         
-        <div class="comentarios">
-            <div class="comentarios-file">
-                <div class="comentarios-up">
-                    <div class="comentarios-assessment">
-                        Valoración: 
-                        <div class="comentarios-assessment-styles">
-                            <?php echo '<div class="stars">'; 
-                            for($i = 1; $i <= $comentarios[1]; $i++){
-                                echo '★';
-                            }
-                            echo '</div>';
-                            ?>   
+        while ($comentarios = mysqli_fetch_row($doQueryComment)) { ;//PONER AQUI EL FORMATO EN EL QEU APARECEN LOS COMENTARIOS ?>
+            
+            <div class="comentarios">
+                <div class="comentarios-file">
+                    <div class="comentarios-up">
+                        <div class="comentarios-assessment">
+                            Valoración: 
+                            <div class="comentarios-assessment-styles">
+                                <?php echo '<div class="stars">'; 
+                                for($i = 1; $i <= $comentarios[1]; $i++){
+                                    echo '★';
+                                }
+                                echo '</div>';
+                                ?>   
+                            </div>
+                        </div>
+                        <div class="comentarios-name">
+                            Viajero:
+                            <div class="comentarios-name-styles">
+                                <?php echo $comentarios[3] ?>
+                            </div>
                         </div>
                     </div>
-                    <div class="comentarios-name">
-                        Viajero:
-                        <div class="comentarios-name-styles">
-                            <?php echo $comentarios[3] ?>
+                    <div class="comentarios-down">
+                        <div class="comentarios-content">
+                            <?php echo $comentarios[2] ?>
                         </div>
-                    </div>
-                </div>
-                <div class="comentarios-down">
-                    <div class="comentarios-content">
-                        <?php echo $comentarios[2] ?>
                     </div>
                 </div>
             </div>
-        </div>
-        <input type="number" name="assessment" value="<?php echo $comentarios[1]?>" class="input_form" hidden>
-        <input type="text" name="content" value="<?php echo $comentarios[3]?>" class="input_form" hidden>
-        <input type="text" name="traveller" value="<?php echo $comentarios[2]?>" class="input_form" hidden>
-    <?php }
+            <input type="number" name="assessment" value="<?php echo $comentarios[1]?>" class="input_form" hidden>
+            <input type="text" name="content" value="<?php echo $comentarios[3]?>" class="input_form" hidden>
+            <input type="text" name="traveller" value="<?php echo $comentarios[2]?>" class="input_form" hidden>
+        <?php }
 
-        $con->close();
-
+            $con->close();
+        
 }
 
 ?>

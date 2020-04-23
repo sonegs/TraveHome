@@ -2,7 +2,7 @@
 <div class="title-signup">
         <div class="center-title-signup">
             <div class="info-title-signup">
-                Escriba su dirección de correo electrónico
+                Reenvio de contraseña
             </div>
         </div>
     </div>
@@ -23,11 +23,15 @@
             </div>
     </div>
     <div class="radio-buttons">
-        <input type="radio" name="usertype" value="traveller" class="radio-signup"> Soy un traveller
-        <input type="radio" name="usertype" value="owner" class="radio-signup" required> Soy un anfitrión<br>
+        <div class="typeofuser">
+            <input type="radio" name="usertype" value="traveller" id="traveller-option" class="radio-signup" required> Soy un traveller
+        </div>
+        <div class="typeofuser">
+            <input type="radio" name="usertype" value="owner" id="owner-option" class="radio-signup"> Soy un anfitrión<br>
+        </div>
     </div>
     <div class="send">
-        <input type="submit" name="submit" value="Crear" class="users-buttons">
+        <input type="submit" name="submit" value="Enviar correo" class="users-buttons">
     </div>
     <div class="fila-login-others">
         <div class="position-signup-others">

@@ -1,8 +1,17 @@
 <?php
 
-session_start();
+
 		
 include "View/Mains/header.php";
+
+if(isset($_COOKIE["Copyright"])){
+	
+} else{
+
+    include "View/Mains/personaldetails.php";
+    
+}
+
 //si no hay usuario registrado:
 
 	if (isset($_GET['nu'])){
@@ -10,6 +19,7 @@ include "View/Mains/header.php";
 		switch ( $_GET['nu'] ) {
 
 		case '0':
+		//echo"<script>window.location='index.php'</script>;";
 			header('Location: index.php');
 			break;
 		case '1':
@@ -38,7 +48,7 @@ elseif(isset($_SESSION['traveller'])){
 		switch ( $_GET['tr'] ) {
 	
 		case '0':
-			include "View/Mains/menu_user.php";
+			include "View/Mains/main.php";
 			break;
 		case '1':
 			include "View/Housing/housing_list.php";
@@ -65,7 +75,7 @@ elseif(isset($_SESSION['traveller'])){
 			include "View/Booking/comments.php";
 			break;
 		default:
-			include "View/Mains/menu_user.php";
+			include "View/Mains/main.php";
 			break;
 									
 		}
@@ -80,7 +90,7 @@ elseif(isset($_SESSION['owner'])){
 	switch ( $_GET['ow'] ) {
 	
 		case '0':
-			include "View/Mains/menu_user.php";
+			include "View/Mains/main.php";
 			break;
 		case '1':
 			include "View/Housing/housing.php";
@@ -110,7 +120,7 @@ elseif(isset($_SESSION['owner'])){
 			include "View/Housing/deletehousing.php";
 			break;
 		default:
-			include "View/Mains/menu_user.php";
+			include "View/Mains/main.php";
 			break;
 									
 		}

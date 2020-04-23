@@ -17,8 +17,8 @@
         </div>
     </div>
     <div class="fila-footer">
-        <div class="col-12">
-            <p class="derechos">Copyright &copy; 2020 Travehome.com. Todos los derechos reservados</p>
+        <div class="fila-derechos">
+            <div class="derechos">Copyright &copy; 2020 Travehome.com. Todos los derechos reservados</div>
         </div>
     </div>
 </section>

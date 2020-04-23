@@ -5,7 +5,7 @@
 $host = "localhost"; // Este es el servidor local o localhost
 $bd = "travehome"; // nombre de la base de datos
 $user = "root"; // usuario que tiene acceso
-$pass = "granobra33"; // la constraseña de la BBDD, ubicada en MAMP/bin/phpmyadmin/config.inc.php. Si tienen problemas con el password, por favor, contacten con el creador de la web
+$pass = "granobra33"; // la constraseña de la BBDD
 
 $con = new mysqli($host, $user, $pass); // Conexión a nuestro Sistema Gestor de Base de Datos (MySQL)
 

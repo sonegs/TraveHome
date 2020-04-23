@@ -24,8 +24,12 @@
             </div>
     </div>
     <div class="select-user">
+        <div class="typeofuser">
             <input type="radio" name="usertype" value="traveller" id="traveller-option" class="radio-signup" required> Soy un traveller
+        </div>
+        <div class="typeofuser">
             <input type="radio" name="usertype" value="owner" id="owner-option" class="radio-signup"> Soy un anfitrión<br>
+        </div>
     </div>
     <div class="send">
         <button class="users-buttons" type="submit" name="submit">Iniciar sesión</button><br><br>

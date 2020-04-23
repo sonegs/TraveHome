@@ -1,15 +1,5 @@
 <section class="mybookings">
-    <?php  
-        
-        if(isset($_POST['submit'])){
-            
-            include "Model/queries/queries_housing.php";
-            insertHousing();
-            
-        }
-        
-    ?>
-
+   
 
     <div class="fila-form-signup">
                 <div class="col-12">
@@ -22,6 +12,16 @@
             </div>
         </div>
     </div>
+    <?php  
+        
+        if(isset($_POST['submit'])){
+            
+            include "Model/queries/queries_housing.php";
+            insertHousing();
+            
+        }
+        
+    ?>
 
                         <h5>Nombre</h5><input type="text" name="nombre" maxlength="30" value="" required ><br><br>
                         <h5>Características de la vivienda: </h5><input type="text" id="descripcion" name="descripcion" class="textbox-description"><br>

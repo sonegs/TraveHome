@@ -12,8 +12,17 @@
         <div class="cities">
             <div class="center-cities">
                 <div class="info-cities">
-                    <div class="name-cities">Málaga</div>
-                    <img class="name-cities-img" src="View/src/cities/malaga.jpg" alt="malaga">
+                    <div class="name-cities">Budapest</div>
+                    <img class="name-cities-img" src="View/src/cities/budapest.jpg" alt="budapest">
+                </div>
+            </div>
+        </div>
+        <div class="cities">
+            <div class="center-cities">
+                <div class="info-cities">
+                    <div class="name-cities">Edimburgo</div>
+                    <img class="name-cities-img" src="View/src/cities/edimburgo.jpg" alt="edimburgo">
+                    
                 </div>
             </div>
         </div>
@@ -29,11 +38,11 @@
     
     
     <div class="fila-info-cities">
-        <div class="cities">
+    <div class="cities">
             <div class="center-cities">
                 <div class="info-cities">
-                    <div class="name-cities">Edimburgo</div>
-                    <img class="name-cities-img" src="View/src/cities/edimburgo.jpg" alt="edimburgo">
+                    <div class="name-cities">Málaga</div>
+                    <img class="name-cities-img" src="View/src/cities/malaga.jpg" alt="malaga">
                 </div>
             </div>
         </div>
@@ -45,10 +54,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    
-    
-    <div class="fila-info-cities">
         <div class="cities">
             <div class="center-cities">
                 <div class="info-cities">
@@ -57,14 +62,8 @@
                 </div>
             </div>
         </div>
-        <div class="cities">
-            <div class="center-cities">
-                <div class="info-cities">
-                    <div class="name-cities">Budapest</div>
-                    <img class="name-cities-img" src="View/src/cities/budapest.jpg" alt="budapest">
-                </div>
-            </div>
-        </div>
     </div>
+    
+    
     
 </section>

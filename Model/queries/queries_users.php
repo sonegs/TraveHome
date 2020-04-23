@@ -8,7 +8,6 @@
 
 */
 
-// LOGIN DE LOS USUARIOS
 
 function login(){
     
@@ -53,15 +52,17 @@ function login(){
                 if($usertype == 'traveller') {
                     
                     $_SESSION['traveller'] = $usuario;
-                    header('Location: index.php?tr=%200'); // Redirigir al index.php
-
+                    echo "<script>location.href='index.php?tr=%200';</script>";
+                    die();
+                    //header('Location: index.php?tr=%200'); // Redirigir al index.php
                 } 
-                
                 
                 if($usertype == 'owner') {
                     
                     $_SESSION['owner'] = $usuario;
-                    header('Location: index.php?ow=%200'); // Redirigir al index.php
+                    echo "<script>location.href='index.php?ow=%200';</script>";
+                    die();
+                    //header('Location: index.php?ow=%200'); // Redirigir al index.php
                     
                 } 
                 

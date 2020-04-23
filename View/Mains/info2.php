@@ -16,14 +16,14 @@
         </div>
         <div class="text-info">
             <div class="center-info">
-                <img class="info-owners-img" src="View/src/viaje.png" alt="airplane pass">
+                <img class="info-owners-img" src="View/src/viaje.png" alt="airplane pass" id="airplanepass">
             </div>
         </div>
     </div>
     <div class="fila-info-owners">
         <div class="text-info">
             <div class="center-info">
-                <img class="info-owners-img" src="View/src/card.png" alt="credit card">
+                <img class="info-owners-img" src="View/src/card.png" alt="credit card" id="creditcard">
             </div>
         </div>
         <div class="text-info">
@@ -44,7 +44,7 @@
         </div>
         <div class="text-info">
             <div class="center-info">
-                <img class="info-owners-img" src="View/src/culturas.png" alt="smartphone">
+                <img class="info-owners-img" src="View/src/culturas.png" alt="planet" id="planet">
             </div>
         </div>
     </div>

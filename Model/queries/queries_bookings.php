@@ -40,9 +40,15 @@ function showBooking(){
         <div class="booking-list">
         <?php
 
+
         while ($elementos = mysqli_fetch_row($doQuery)) { //muestra las reservas que han hecho.
             //este codigo une los distintos códigos de la BBDD para añadir seguridad a las reservas y para acceder a ellas y modificarlas
-            ?>
+            $checkinFormated = $elementos[4][8].$elementos[4][9].'-'.$elementos[4][5].$elementos[4][6].'-'.
+            $elementos[4][0].$elementos[4][1].$elementos[4][2].$elementos[4][3];
+
+            $checkoutFormated = $elementos[5][8].$elementos[5][9].'-'.$elementos[5][5].$elementos[5][6].'-'.
+            $elementos[5][0].$elementos[5][1].$elementos[5][2].$elementos[5][3];
+?>
             
             <div class="house-file">
                 <div class="house-file-zone">
@@ -56,13 +62,13 @@ function showBooking(){
                         </div>
                         <div class="details-book">
                             <div class="address-house">
-                                <?php echo 'Dirección: '.$elementos[1]?>
+                                <?php echo $elementos[1]?>
                             </div>
                             <div class="description-house">
                                 <?php echo "Estado: ".$elementos[8] ?>
                             </div>
                             <div class="checks-book">
-                                <?php echo $elementos[4].' - '.$elementos[5] ?>
+                                <?php echo $checkinFormated.' - '.$checkoutFormated ?>
                             </div>
                         
             
@@ -75,13 +81,13 @@ function showBooking(){
 
                             ?>
 
-                                        <form action="index.php?ow=%2010" method="POST"> 
+                                        <form action="index.php?ow=%209" method="POST"> 
 
                                 <?php } 
                                 
                                     if(isset($_SESSION['traveller'])){ //EL ENVIO DE LOS USUARIOS TRAVELLERS. ESTA JUNTO PARA APROVECHAR CÓDIGO?>
 
-                                        <form action="index.php?tr=%209" method="POST"> 
+                                        <form action="index.php?tr=%207" method="POST"> 
                                             
                                         <?php } ?>
 
@@ -139,7 +145,7 @@ function showBooking(){
 
                                         ?>
 
-                                        <form action="index.php?tr=%2010" method="POST">
+                                        <form action="index.php?tr=%208" method="POST">
                                             <input type="number" name="id-booking" value="<?php echo $elementos[9]?>" class="input_form" hidden>
                                             <input type="number" name="id-housing" value="<?php echo $elementos[10]?>" class="input_form" hidden>
                                         <input type="submit" value="Valorar la estancia" class="users-buttons-housing">
@@ -168,7 +174,8 @@ function showBooking(){
                         
                         </div>
                     </div>
-                    </div>
+                </div>
+                </div>
                         
                 <?php
 
@@ -182,15 +189,8 @@ function showBooking(){
     
         }  // cierre del while y del if
         
-        ?>
 
-
-                                            
-        <?php
-
-    $con-->close();
-
-}
+} // cierre de la funcion
 
 // PEDIR RESERVA
 
@@ -208,9 +208,9 @@ function sendMessage($idOwner, $nameImg) { // le pasamos los valores necesarios 
     $direccion = $_POST['direccion'];
     $ciudad = $_POST['ciudad'];
     $pais = $_POST['pais'];
-    $assessment = $_POST['assessment'];
-    $content = $_POST['content'];
-    $traveller = $_POST['traveller'];
+    //$assessment = $_POST['assessment'];
+    //$content = $_POST['content'];
+    //$traveller = $_SESSION['traveller'];
 
     // Creamos valores para poder comparar la fecha introducida con la actual y testear los datos 
     $hoy = getDate()['year'].'-'.getDate()['mon'].'-'.getDate()['mday'];
@@ -270,13 +270,13 @@ $envioQuery = mysqli_query($con, $queryMail);
                     $idBooking = $takeIDBooking[0];
                     
                     // MENSAJE QUE SE ENVIA AL PROPIETARIO DE LA VIVIENDA
-                    $mensaje = "Hola $nameOwner $surnameOwner, <br><br>
+                    $mensaje = "Hola $nameOwner $surnameOwner, 
 
-                    El usuario $nombre $apellidos ha solicitado alojarse en su vivienda $nameHouse desde el $checkin hasta el $checkout.<br><br>
+                    El usuario $nombre $apellidos ha solicitado alojarse en su vivienda $nameHouse desde el $checkin hasta el $checkout.
 
-                    Si desea aceptar a este huesped, por favor, gestione la reserva a través de nuestra página web.<br><br>
+                    Si desea aceptar a este huesped, por favor, gestione la reserva a través de nuestra página web.
 
-                    Un saludo<br><br>
+                    Un saludo
                     
                     El equipo de TraveHome";
                     
@@ -304,7 +304,7 @@ $envioQuery = mysqli_query($con, $queryMail);
     } else {
         
         // Si las fechas introducidas no son válidas, se reenvia la información del propietario al formulario de reserva
-                    // header('Location: index.php?tr=%201');
+                    
                 echo "<h4 class='delete-advice'>Las fechas no son validas</h4>";
                 
     }
@@ -326,11 +326,15 @@ function decisionBooking($decision){
     include "Model/DDBB/connection.php";
     
     // declaración de variables que cogemos del formulario y de los datos de la sesion
-    $phoneOwner = $_SESSION['owner']['Phone'];
-    $nameOwner = $_SESSION['owner']['Name'];
-    $surnameOwner = $_SESSION['owner']['Surname'];
-    $emailOwner = $_SESSION['owner']['Email'];
-    
+    if(isset($_SESSION['owner'])){   
+
+        $phoneOwner = $_SESSION['owner']['Phone'];
+        $nameOwner = $_SESSION['owner']['Name'];
+        $surnameOwner = $_SESSION['owner']['Surname'];
+        $emailOwner = $_SESSION['owner']['Email'];
+
+    }
+
     $idBook = isset($_POST['id-booking']) ? $_POST['id-booking'] : false;
     $idHousing = isset($_POST['id-housing']) ? $_POST['id-housing'] : false;
     $idTraveller = isset($_POST['id-traveller']) ? $_POST['id-traveller'] : false;
@@ -379,38 +383,32 @@ function decisionBooking($decision){
                 $doQueryChange = mysqli_query($con, $queryChange);
 
                 if (mysqli_query($con, $queryChange)) {
-                
-                    if ($elementos = mysqli_fetch_row($doQueryChange)) { // Si ya se ha realizado la petición
-
-                        echo "<h4 class='delete-advice'>La petición ya ha sido procesada</h4>";
-                    
-                    } else { //Si aún no se ha aceptado, se realiza el siguiente código
 
                         // MENSAJE QUE SE ENVIA AL VIAJERO QUE HA SOLICITADO LA ESTANCIA EN LA VIVIENDA
-                        $mensajeTraveller = "Hola $nameTraveller $surnameTraveller, <br><br>
+                        $mensajeTraveller = "Hola $nameTraveller $surnameTraveller, 
 
-                        El propietario de la vivienda ha aceptado su solicitud para alojarse en su vivienda $nameHouse desde el $checkin hasta el $checkout.<br><br>
+                        El propietario de la vivienda ha aceptado su solicitud para alojarse en su vivienda $nameHouse desde el $checkin hasta el $checkout.
 
-                        Puede ponerse en contacto con el propietario a través de este correo electrónico <a href='mailto:$emailOwner'>$emailOwner</a> o del siguiente número de teléfono <a href='tel:$phoneOwner'>$phoneOwner</a> <br><br>
+                        Puede ponerse en contacto con el propietario a través de este correo electrónico $emailOwner o del siguiente número de teléfono $phoneOwner.
             
-                        Si por el contrario, desea cancelar su estancia, pinche <a href='index.php?tr=%209'>aquí</a>.<br><br>
+                        Si por el contrario, desea cancelar su estancia, acceda a ella iniciando sesión en nuestra web.
 
-                        Un saludo<br><br>
+                        Un saludo
                 
                         El equipo de TraveHome";
                 
                         //echo $mensajeTraveller.'<br>'; 
 
                         // MENSAJE QUE SE ENVIA AL PROPIETARIO DE LA VIVIENDA
-                        $mensajeOwner = "Hola $nameOwner $surnameOwner, <br><br>
+                        $mensajeOwner = "Hola $nameOwner $surnameOwner,
 
-                        Le enviamo este email porque ha aceptado la solicitud de $nameTraveller $surnameTraveller para alojarse en su vivienda $nameHouse desde el $checkin hasta el $checkout.<br><br>
+                        Le enviamo este email porque ha aceptado la solicitud de $nameTraveller $surnameTraveller para alojarse en su vivienda $nameHouse desde el $checkin hasta el $checkout.
 
-                        Puede ponerse en contacto con su huesped a través de este correo electrónico <a href='mailto:$emailTraveller'>$emailTraveller</a> o del siguiente número de teléfono <a href='tel:$phoneTraveller'>$phoneTraveller</a> <br><br>
+                        Puede ponerse en contacto con su huesped a través de este correo electrónico $emailTraveller o del siguiente número de teléfono $phoneTraveller.
             
-                        Si por el contrario, desea cancelar esta reserva, pinche <a href='index.php?ow=%2011'>aquí</a>.<br><br>
+                        Si por el contrario, desea cancelar esta reserva, acceda a ella iniciando sesión en nuestra web.
 
-                        Un saludo<br><br>
+                        Un saludo
                 
                         El equipo de TraveHome";
                 
@@ -428,7 +426,7 @@ function decisionBooking($decision){
 
                     }
                      
-                }
+                
             
             } // Aquí acaba el proceso si ha sido aceptada
                 
@@ -447,23 +445,23 @@ function decisionBooking($decision){
                 if (mysqli_query($con, $queryChange)) {
                 
                     // MENSAJE QUE SE ENVIA AL VIAJERO QUE HA SOLICITADO LA ESTANCIA EN LA VIVIENDA
-                    $mensajeTraveller = "Hola $nameTraveller $surnameTraveller, <br><br>
+                    $mensajeTraveller = "Hola $nameTraveller $surnameTraveller,
 
-                    El propietario de la vivienda ha rechazado su solicitud para alojarse en su vivienda $nameHouse desde el $checkin hasta el $checkout.<br><br>
+                    El propietario de la vivienda ha rechazado su solicitud para alojarse en su vivienda $nameHouse desde el $checkin hasta el $checkout.
 
-                    Le invitamos a que revise de nuevo los alojamientos por si pudiese encontrar otro de su interés.<br><br>
+                    Le invitamos a que revise de nuevo los alojamientos por si pudiese encontrar otro de su interés.
 
-                    Un saludo<br><br>
+                    Un saludo
                     
                     El equipo de TraveHome";
                     
                     //echo $mensajeTraveller.'<br>'; 
                     
-                    if(mail($emailTraveller, 'Solicitud de alojamiento', $mensajeTraveller) && $_SESSION['owner']){ //si se envia el email y la sesión es de owner
+                    if(mail($emailTraveller, 'Solicitud de alojamiento', $mensajeTraveller) && isset($_SESSION['owner'])){ //si se envia el email y la sesión es de owner
 
                         echo "<h4 class='delete-advice'>Hemos enviado un email de cancelación al huesped que ha solicitado su alojamiento. Gracias por utilizar los servicios de TraveHome</h4>";
         
-                    } elseif(mail($emailOwner, 'Solicitud de alojamiento', $mensajeTraveller) && $_SESSION['traveller']){ //si se envia el email y la sesion es de traveller
+                    } elseif(mail($emailOwner, 'Solicitud de alojamiento', $mensajeTraveller) && isset($_SESSION['traveller'])){ //si se envia el email y la sesion es de traveller
 
                         echo "<h4 class='delete-advice'>Se ha cancelado su estancia en $nameHouse. Gracias por utilizar los servicios de TraveHome</h4>";
         

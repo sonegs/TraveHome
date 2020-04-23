@@ -359,7 +359,7 @@ function showHousing() {
                             ?>
 
                         <div id="reservar">
-                            <form action="index.php?tr=%208" method="POST" class="looking-cities"> 
+                            <form action="index.php?tr=%206" method="POST" class="looking-cities"> 
                             <input type="number" name="idHouse" value="<?php echo $datos[0]?>" class="input_form" hidden>
                             <input type="text" name="name" value="<?php echo $datos[1]?>" class="input_form" hidden>
                             <input type="text" name="description" value="<?php echo $datos[2]?>" class="input_form" hidden>
@@ -378,7 +378,7 @@ function showHousing() {
                     <div class="choose-buttons">
                         <div class="fila-choose-buttons">
                             <div id="editar">
-                                <form action="index.php?ow=%209" method="POST" class="choose-house">                        
+                                <form action="index.php?ow=%208" method="POST" class="choose-house">                        
                                     <input type="number" name="idHouse" value="<?php echo $datos[0]?>" class="input_form" hidden>
                                     <input type="submit" value="Editar" class="users-buttons-choose-housing">
                                 </form>
@@ -386,7 +386,7 @@ function showHousing() {
                         </div>
                         <div class="fila-choose-buttons">
                             <div id="eliminar">
-                                <form action="index.php?ow=%2011" method="POST" class="choose-house">
+                                <form action="index.php?ow=%2010" method="POST" class="choose-house">
                                     <input type="number" name="idHouse" value="<?php echo $datos[0]?>" class="input_form" hidden>
                                     <input type="text" name="nameHouse" value="<?php echo $datos[1]?>" class="input_form" hidden>
                                     <input type="text" name="description" value="<?php echo $datos[2]?>" class="input_form" hidden>
@@ -425,7 +425,6 @@ function showHousing() {
 
         
 
-    $con-->close();
 
 }
 

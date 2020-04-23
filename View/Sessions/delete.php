@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
     <div class="fila-form-signup">
         <div class="col-12">
             <div class="signup">
-                <form action="" method="POST">
+                <form class="form-signup" action="" method="POST">
                     <h4>Si hace esto, no podrá volver a disfrutar de las ventajas de TraveHome</h4><br>
                     <div class="books-buttons">
                         <input type="submit" name="submit" value="Eliminar cuenta" class="users-buttons" id="checkdates">
@@ -48,10 +48,6 @@ if(isset($_POST['submit'])){
                         <?php
                         } 
                         ?>  
-
-                        
-
-
 
                     </div>          
             

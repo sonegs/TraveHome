@@ -1,25 +1,22 @@
 var contador = 1;
-var colores = 1;
 
 var validarFecha;
 
 $(document).ready(function() {
-
-    /* ESTO ES LO QUE MUEVE LA IMAGEN QUE COPIASTE CUANDO PONES ENCIMA EL RATON PONE TRAVEHOME
-    $("figure").mouseleave(
-        function() {
-            $(this).removeClass("hover");
-        }
-    ); */
+    var agreement = 1;
     //mueve las imagenes de la mochila y la casa al iniciar sesion/crear usuario
     $("#traveller-option").click(function() {
-        $("#traveller-icon").animate({ marginTop: 0 }, 50).animate({ marginTop: -50 }, 200).animate({ marginTop: 0 }, 200).animate({ marginTop: -50 }, 200).animate({ marginTop: 0 }, 200);
+
+        $("#traveller-icon").animate({ marginTop: 0 }, 50).animate({ marginTop: -35 }, 200).animate({ marginTop: 0 }, 200).animate({ marginTop: -35 }, 200).animate({ marginTop: 0 }, 200);
+
     });
 
     $("#owner-option").click(function() {
-        $("#owner-icon").animate({ marginTop: 0 }, 50).animate({ marginTop: -50 }, 200).animate({ marginTop: 0 }, 200).animate({ marginTop: -50 }, 200).animate({ marginTop: 0 }, 200);
-    });
 
+        $("#owner-icon").animate({ marginTop: 0 }, 50).animate({ marginTop: -50 }, 200).animate({ marginTop: 0 }, 200).animate({ marginTop: -50 }, 200).animate({ marginTop: 0 }, 200);
+
+    });
+    //comprueba que las fechas introducidas en el navegador para hacer la reserva son correctas
     $(".checks").change(function() {
 
         var checkin = document.getElementById('start').value;
@@ -57,11 +54,11 @@ $(document).ready(function() {
             alert("Introduzca una fecha posterior para su reserva");
 
             $("#start").val(today);
-            $("#end").val(today);
+
 
         } else {
 
-            console.log(false);
+
 
         }
     });
@@ -80,6 +77,28 @@ $(document).ready(function() {
                 left: '-100%'
             });
         }
+
+    });
+
+    // llama a una función para que cree la cookie y hace desaparecer el menu de navegación del footer
+    $('#agreement').click(function() {
+        $("#agreement").load("Model/queries/cookies.php", function(ifCookie, statusTxt, xhr) { //al cargar el rombo, que llame al archivo devolverColor de PHP
+
+            if (statusTxt == "success") { //si se ha realizado la comunicación correctamente
+
+                $('footer').animate({
+                    bottom: '-100%'
+                });
+                agreement = 0;
+            }
+
+            if (statusTxt == "error") { //si ha ocurrido un error en la comunicación con PHP lo imprime en consola
+
+                console.log("Se ha producido el siguiente error: " + xhr.status + ": " + xhr.statusText); //indica el tipo de error en la comunicacion AJAX
+
+            }
+
+        });
 
     });
 
@@ -106,23 +125,46 @@ $(document).ready(function() {
 
     });
 
-    $('.principal-info').mouseover(function() {
-        // $('nav').toggle(); 
+});
+$("main.php").ready(function() { // cuando se carge la pantalla principal sin logear, que haga estos efectos
 
-        if (colores == 1) {
-            $('.zone-blue').animate({
-                left: '0'
-            }, 400);
-            $('.zone-green').animate({
-                left: '0'
-            }, 600);
-            $('.zone-orange').animate({
-                left: '0'
-            }, 1000);
-            $('.zone-orange2').animate({
-                left: '0'
-            }, 900);
-            colores = 0;
+    $(window).scroll(function() { //cuando se haga scroll en la pagina web
+
+        var windowHeight = $(window).scrollTop();
+        var contenido2 = $("#subtitulo-principal").offset();
+        var contenido3 = $("#signal-images").offset();
+
+        if (typeof $('#subtitulo-principal').offset() == 'undefined' || typeof $('#signal-images').offset() == 'undefined') {
+
+        } else { // evita que aparezca un error en consola si no nos encontramos en la web principal
+
+            contenido2 = contenido2.top;
+            contenido3 = contenido3.top;
+
+
+            if (windowHeight >= contenido2) {
+
+                $('.zone-green').animate({
+                    left: '0'
+                }, 1600);
+                $('.zone-orange').animate({
+                    left: '0'
+                }, 1400);
+                $('.zone-orange2').animate({
+                    left: '0'
+                }, 700);
+                $('.zone-blue').animate({
+                    left: '0'
+                }, 2000);
+            }
+
+            if (windowHeight >= contenido3) {
+
+                $('#airplanepass').fadeIn(1500);
+                $('#planet').fadeIn(2500);
+                $('#creditcard').fadeIn(3500);
+
+            }
         }
     });
 });

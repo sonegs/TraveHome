@@ -1,5 +1,5 @@
-<section class="mybookings">
-<form class="house-form" method="POST" action="">
+<section class="totalSignup">
+
 <div class="title-signup">
         <div class="center-title-signup">
             <div class="info-title-signup">
@@ -11,7 +11,7 @@
             <div class="fila-form-signup">
                 <div class="col-12">
                     <div class="signup">
-                        
+                    <form class="form-signup" method="POST" action="">
                             <h5>DNI. Debe ser el mismo con el que te inscribiste a Travehome</h5><input type="text" name="dni" value="" class="signup_form" maxlength="9" minlength="8" required><br><br>
                             <h5>Número de teléfono. No olvides poner el prefijo de tu país (p.e. España: 34)</h5><input type="number" name="telefono" value="" class="signup_form" maxlength="11" required><br><br>
                             <h5>Email</h5><input type="email" name="email" value="" class="signup_form" required><br><br>
@@ -24,7 +24,7 @@
                             
     <?php
 
-session_start();
+
 include "Model/queries/queries_users.php";
 
 if(isset($_POST['submit'])){
@@ -40,33 +40,34 @@ if(isset($_POST['submit'])){
 }
 }
 ?>
-                            <div class="fila-login-others">
-                                <div class="position-signup-others">
+                            <div class="fila-setting-others">
+                                <div class="position-setting-others">
             
-            <?php
+                                <?php
 
-            if(isset($_SESSION['traveller'])){
+                                if(isset($_SESSION['traveller'])){
 
-            ?>                       
-                <a href="index.php?tr=%207" class="button">¿Desea eliminar su cuenta? </a>  
-                <a href="index.php?tr=%200" class="button">Volver </a><br>
-            <?php
-            
-            }
+                                ?>                       
+                                    <a href="index.php?tr=%205" class="button">¿Desea eliminar su cuenta? </a>  
+                                    <a href="index.php?tr=%200" class="button">Volver </a><br>
+                                <?php
+                                
+                                }
 
-            if(isset($_SESSION['owner'])){
+                                if(isset($_SESSION['owner'])){
 
-            ?>  
-                <a href="index.php?ow=%208" class="button">¿Desea eliminar su cuenta? </a>
-                <a href="index.php?ow=%200" class="button">Volver </a><br>
-            <?php
-            
-            } 
-            ?>
-            
-            <div class="send">
-                <input type="submit" name="submit" value="Modificar" class="users-buttons">
-            </div>
+                                ?>  
+                                    <a href="index.php?ow=%207" class="button">¿Desea eliminar su cuenta? </a>
+                                    <a href="index.php?ow=%200" class="button">Volver </a><br>
+                                <?php
+                                
+                                } 
+                                ?>
+                                
+                                </div>
+                                <div class="send">
+                                    <input type="submit" name="submit" value="Modificar" class="users-buttons">
+                                </div>
 
                             
                                 </div>

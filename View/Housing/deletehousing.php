@@ -1,4 +1,4 @@
-<section class="mybookings">
+<section class="principal-house-form">
     <form class="house-form" method="POST" action="">
     
     <div class="title-signup">
@@ -8,9 +8,11 @@
             </div>
         </div>
     </div>
-            <div class="subtitle-book"><?php echo $_POST['direccion'].' - '.$_POST['ciudad'].', '.$_POST['pais']?></div>
-            <div class="imagen-book">
-                <img name="name-img" class="image-book" src="View/uploads/<?php echo $_POST['name-img']?>">
+
+            <div class="position-imagen-book">
+                <div class="imagen-book">
+                    <img name="name-img" class="imagen-file" src="View/uploads/<?php echo $_POST['name-img']?>">
+                </div>
             </div>
             <div class="size-description-book">
                 <div class="position-description-book">
@@ -19,13 +21,7 @@
             </div>
             <input type="number" name="idHouse" value="<?php echo $_POST['idHouse']?>" class="input_form" hidden>
             <div class="delete-advice">¿Está seguro de que quiere eliminar esta vivienda</div>
-            <div class="books-buttons">
-                <input type="submit" name="submit" value="Eliminar" class="users-buttons" id="checkdates">
-                <input type="reset" onclick="location.href='index.php?ow=02'" id="fechas" value="Cancelar" class="users-buttons">
-            </div>
-            </div>
-
-    <?php  
+            <?php  
 
     
 
@@ -39,5 +35,12 @@
 
             
     ?>
+            <div class="books-buttons">
+                <input type="submit" name="submit" value="Eliminar" class="users-buttons" id="checkdates">
+                <input type="reset" onclick="location.href='index.php?ow=02'" id="fechas" value="Cancelar" class="users-buttons">
+            </div>
+            </div>
+
+    
         </form>
     </section>
