@@ -2,7 +2,7 @@
 <div class="title-comment">
         <div class="center-title-signup">
             <div class="info-title-signup">
-                Deje su comentario sobre su estancia
+                Enviar valoración sobre la vivienda
             </div>
         </div>
     </div>

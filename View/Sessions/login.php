@@ -5,13 +5,24 @@
         <div class="position-title-login">
             Inicie sesión
         </div>
-    </div>
+    </div><?php
+
+if(isset($_POST['submit'])) {
+
+    include 'Model/queries/queries_users.php';
+    login();
+
+    }
+?>  
     <div class="fila-form-signup">
         <div class="col-12">
             <div class="signup">
                 <form class="form-signup" action="" method="POST">
-                    <input type="email" id="inputEmail" class="signup_form" name="email" placeholder="Email address" required autofocus><br>  
-                    <input type="password" id="inputPassword" class="signup_form" name="contrasena" placeholder="Password" required>
+                    
+                    
+                    <input type="email" id="inputEmail" class="signup_form" name="email" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value=""  minlength="14" required ><br><br>
+                    <input type="password" id="inputPassword" placeholder="Password" name="contrasena" title="Debe ser mínimo de 5 caracteres y sin espacios" pattern="[a-zA-Z_0-9!@#$%&/()=?¿¡!-_Ç€*]+" minlength="5" value="" class="signup_form" required><br><br>
+
             </div>
         </div>
     </div>  
@@ -55,13 +66,5 @@
         </div>
         
     </div>
-    <?php
-
-if(isset($_POST['submit'])) {
-
-    include 'Model/queries/queries_users.php';
-    login();
-
-    }
-?>  
+    
 </section>

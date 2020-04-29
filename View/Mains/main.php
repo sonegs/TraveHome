@@ -7,7 +7,9 @@
     
     <div class="fila-entry"> 
         <div class="col-12">
-            <div class="info-main">Encontrar alojamiento nunca fue tan fácil</div>
+            <div class="info-main">
+                <div class="fadein">Encontrar alojamiento nunca fue tan fácil</div>
+            </div>
         </div>
 
         <?php

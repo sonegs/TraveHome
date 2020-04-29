@@ -107,7 +107,7 @@
                 .bt-menu:hover {
                     color: rgb(241, 219, 198);
                 }
-                /****************************************** FOOTER *******************************************/
+                /****************************************** COOKIES *******************************************/
                 
                 footer {
                     width: 100%;
@@ -126,7 +126,6 @@
                 }
                 
                 .personal-details {
-                    height: 10%;
                     color: #fff;
                     padding: 13px;
                     font-size: 12px;
@@ -141,7 +140,7 @@
                 
                 .position-cookies {
                     display: flex;
-                    justify-content: flex-end;
+                    justify-content: flex-start;
                 }
                 
                 .accept-cookies {
@@ -175,10 +174,15 @@
                 .title-main {
                     font-weight: bold;
                     height: 70px;
+                    display: none;
                 }
                 
                 .info-main {
                     font-size: 120%;
+                }
+                
+                .fadein {
+                    display: none;
                 }
                 
                 .fila-buttons {
@@ -204,7 +208,6 @@
                     border-radius: 10%;
                     color: white;
                     font-family: "Roboto", "Lucida Sans Unicode", Arial, sans-serif;
-                    font-size: 100%;
                 }
                 
                 .accept-cookies:hover,
@@ -220,15 +223,14 @@
                     width: 80%;
                     margin: 10px;
                 }
+                
+                .users-buttons {
+                    display: none;
+                }
                 /**************************************** INFO GENERAL *******************************************/
                 
                 .principal-info {
                     width: 100%;
-                    background: url(../src/probandocasa.png) no-repeat center;
-                    background: -webkit-linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(224, 224, 224, 0.7)), url(../src/probandocasa.png) no-repeat;
-                    background: -moz-linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(224, 224, 224, 0.7)), url(../src/probandocasa.png) no-repeat;
-                    background: linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(224, 224, 224, 0.7)), url(../src/probandocasa.png) no-repeat;
-                    background-position: 70% 75%;
                     text-align: center;
                     font-family: "Helvetica Neue", "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
                     display: flex;
@@ -338,9 +340,17 @@
                     font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
                     text-transform: none;
                     font-variant: small-caps;
-                    background: url(../src/fondoviajes.png) no-repeat fixed;
                     background-size: cover;
-                    height: 95%;
+                    height: 90%;
+                }
+                
+                .principal-cities:before {
+                    background: black;
+                    opacity: 0.1;
+                    position: absolute;
+                    content: '';
+                    width: inherit;
+                    display: flex;
                 }
                 
                 .title-cities {
@@ -476,14 +486,13 @@
                 .select-user {
                     display: flex;
                     color: white;
-                    height: 10vh;
+                    height: 7vh;
                     justify-content: center;
                 }
                 
                 .send {
                     display: flex;
                     justify-content: center;
-                    margin-top: 20px;
                 }
                 
                 .button {
@@ -496,7 +505,7 @@
                     text-align: center;
                     align-items: center;
                     justify-content: center;
-                    height: 20vh;
+                    height: 10vh;
                     width: 100%;
                 }
                 
@@ -511,16 +520,18 @@
                     text-align: center;
                     font-family: "Source Sanz Pro", sans-serif;
                     font-size: 80%;
+                    height: 50px;
                     color: rgb(247, 244, 244);
                     text-decoration: none solid rgb(68, 68, 68);
                     font-style: normal;
                     font-variant: small-caps;
-                    opacity: 0.9;
                     text-transform: none;
+                    height: 20px;
                 }
                 /************************ SIGNUP *************************/
                 
                 .totalSignup {
+                    min-height: 100%;
                     display: flex;
                     flex-direction: column;
                     width: inherit;
@@ -566,23 +577,21 @@
                     text-decoration: none solid rgb(68, 68, 68);
                 }
                 
-                .signup_form {
+                .signup_form,
+                .textbox-description {
                     border-radius: 5px;
                     background-color: #def;
                     border: 1px solid #ffffff;
                 }
-                
+                /*
                 .form-signup {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
+                    
+                } */
                 
                 .form-signup h5 {
                     font-size: 1.5vmax;
                     color: white;
-                    margin: 0vw 2vw 1vw 2vw;
+                    margin: 0vw 2vw 0.5vw 2vw;
                 }
                 
                 .position-signup-others {
@@ -603,6 +612,12 @@
                 .signup-button {
                     color: white;
                     font-family: "Source Sanz Pro", sans-serif;
+                }
+                
+                .error-signup {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
                 }
                 /***************************************** FORGET PASSWORD *****************************************/
                 
@@ -929,14 +944,17 @@
                 
                 .position-textbox-comment {
                     display: flex;
+                    justify-content: center;
                     width: 100%;
                 }
                 
                 .textbox-comment {
-                    height: 80px;
-                    width: 100%;
+                    width: 70vw;
+                    height: 15vmin;
                     margin: 10px;
                     border: 1px solid orange;
+                    border-radius: 5px;
+                    background-color: #def;
                 }
                 
                 .title-comment {
@@ -962,7 +980,8 @@
                 }
                 
                 .comentario {
-                    font-size: 20px;
+                    font-size: 4.5vmin;
+                    padding: 0px 5px 0px 5px;
                 }
                 /********************************* ESTILOS PARA LA VALORACIÓN EN ESTRELLAS *****************************************/
                 
@@ -971,7 +990,7 @@
                 }
                 
                 .comment label {
-                    font-size: 25px;
+                    font-size: 7.5vmin;
                     color: white;
                 }
                 
@@ -984,7 +1003,7 @@
                     unicode-bidi: bidi-override;
                     display: flex;
                     justify-content: center;
-                    margin: 50px;
+                    margin: 5vh 5vw 5vh 5vw;
                 }
                 
                 .clasificacion {
@@ -1022,8 +1041,8 @@
                 }
                 
                 .textbox-description {
-                    width: 300px;
-                    height: 80px;
+                    width: 40vw;
+                    height: 12vh;
                 }
                 /********************************* VER CASAS *****************************************/
                 
@@ -1045,9 +1064,9 @@
                 /********************************* VER RESERVAS *****************************************/
                 
                 .mybookings {
-                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
-                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
-                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 95, 158, 0.7));
+                    background: -webkit-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 61, 102, 0.7));
+                    background: -moz-linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 52, 87, 0.7));
+                    background: linear-gradient(145deg, rgba(31, 148, 177, 0.85), rgba(0, 53, 88, 0.7));
                     display: flex;
                     flex-direction: column;
                     min-height: 100%;
@@ -1196,16 +1215,25 @@
                     .users-buttons-housing,
                     .users-buttons-choose-housing {
                         padding: 0.5em 2em;
-                        font-size: 100%;
+                    }
+                    .users-buttons,
+                    .users-buttons-type,
+                    .users-buttons-choose-housing {
+                        font-size: 15px;
                     }
                     .users-buttons-housing {
                         padding: 10px 10px 10px 10px;
                         width: 120px;
+                        font-size: 13px;
                     }
                     /**************************************** INFO GENERAL *******************************************/
                     .principal-info {
                         color: rgb(54, 54, 54);
                         display: flex;
+                        background: -webkit-linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(236, 236, 236, 0.7)), url(../src/probandocasa.png) no-repeat;
+                        background: -moz-linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(240, 240, 240, 0.7)), url(../src/probandocasa.png) no-repeat;
+                        background: linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(236, 236, 236, 0.7)), url(../src/probandocasa.png) no-repeat;
+                        background-position: 70% 75%;
                     }
                     .zone {
                         width: 35%;
@@ -1220,7 +1248,8 @@
                         background: linear-gradient(145deg, rgba(0, 143, 179, 0.85), rgba(84, 221, 255, 0.85));
                         min-height: 100%;
                         left: -100%;
-                        margin-left: 0;
+                        position: relative;
+                        float: left;
                     }
                     .zone-orange,
                     .zone-orange2 {
@@ -1230,6 +1259,8 @@
                         background: linear-gradient(145deg, rgba(255, 147, 6, 0.85), rgba(255, 189, 90, 0.85));
                         min-height: 100%;
                         left: -100%;
+                        position: relative;
+                        float: left;
                     }
                     .zone-green {
                         width: 22%;
@@ -1238,6 +1269,8 @@
                         background: linear-gradient(145deg, rgba(22, 126, 39, 0.85), rgba(104, 245, 76, 0.85));
                         min-height: 100%;
                         left: -100%;
+                        position: relative;
+                        float: left;
                     }
                     .info-web {
                         display: flex;
@@ -1291,6 +1324,7 @@
                     .principal-cities {
                         background: url(../src/fondoviajes.png) no-repeat fixed;
                         background-size: cover;
+                        position: relative;
                     }
                     .title-cities {
                         height: 30%;
@@ -1329,7 +1363,7 @@
                     }
                     .name-cities-img {
                         width: 22vw;
-                        height: 24vh;
+                        height: 20vmin;
                     }
                     /***************************************** FOOTER DE CONTACTO *****************************************/
                     .fila-footer {
@@ -1361,7 +1395,6 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        margin-bottom: 20px;
                     }
                     #traveller-icon,
                     .info-login-img {
@@ -1385,15 +1418,21 @@
                     .info-title-signup {
                         font-size: 5vw;
                     }
-                    .signup_form {
+                    .signup_form,
+                    .textbox-description {
                         font-family: "Roboto", sans-serif;
                         font-size: 14px;
                         color: rgb(14, 67, 110);
+                    }
+                    .signup_form {
                         width: 30vw;
                         height: 6vh;
                     }
                     .type-signup {
                         margin: 20px 30px 0px 30px;
+                    }
+                    .select-user {
+                        margin-bottom: 15px;
                     }
                     /***************************************** OPCIONES TRAVELLERS *****************************************/
                     /***************************************** BUSCAR CIUDAD *****************************************/
@@ -1593,6 +1632,15 @@
                 /************************************************************************************/
                 
                 @media screen and (max-height:450px) {
+                    .fila-entry {
+                        justify-content: center;
+                    }
+                    .users-buttons,
+                    .users-buttons-type,
+                    .users-buttons-housing,
+                    .users-buttons-choose-housing {
+                        font-size: 13px;
+                    }
                     .info {
                         font-size: 2vmax;
                     }
@@ -1669,10 +1717,14 @@
                     .principal-info {
                         display: flex;
                         flex-direction: column;
+                        background: -webkit-linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(236, 236, 236, 0.7)), url(../src/probandocasamobile.png) no-repeat;
+                        background: -moz-linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(240, 240, 240, 0.7)), url(../src/probandocasamobile.png) no-repeat;
+                        background: linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(236, 236, 236, 0.7)), url(../src/probandocasamobile.png) no-repeat;
+                        background-position: 50% 45%;
                     }
                     .info-title {
-                        height: 15%;
-                        justify-content: flex-end;
+                        height: 30%;
+                        align-items: flex-end;
                     }
                     .info-web {
                         height: 100%;
@@ -1681,18 +1733,17 @@
                         font-size: 8vw;
                     }
                     .zone-text {
+                        height: 42%;
+                        padding-top: 10%;
+                    }
+                    .content-info {
+                        display: flex;
+                        flex-direction: column;
                         height: 50%;
-                        padding-top: 5%;
                     }
                     .fila-info {
                         height: 80%;
                         margin-bottom: 5%;
-                    }
-                    .info {
-                        height: 130px;
-                    }
-                    .content-info {
-                        height: 70%;
                     }
                     .info-home {
                         width: 250px;
@@ -1720,10 +1771,9 @@
                         height: 80px;
                     }
                     .info-title-cities {
-                        font-size: 6.5vh;
+                        font-size: 5.5vh;
                     }
                     .fila-info-cities {
-                        opacity: 0.8;
                         border-radius: 2%;
                         height: 50%;
                         margin-bottom: -15px;

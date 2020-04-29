@@ -3,8 +3,110 @@ var contador = 1;
 var validarFecha;
 
 $(document).ready(function() {
+
     var agreement = 1;
-    //mueve las imagenes de la mochila y la casa al iniciar sesion/crear usuario
+    /**************************************************************/
+    // ESTA FUNCION LLAMA AL ARCHIVO COOKIES.PHP Y HACE DESAPARECER EL FOOTER DE LAS COOKIES 
+    /**************************************************************/
+    $('#agreement').click(function() {
+
+        $("#agreement").load("Model/queries/cookies.php", function(ifCookie, statusTxt, xhr) { //al cargar el rombo, que llame al archivo devolverColor de PHP
+
+            if (statusTxt == "success") { //si se ha realizado la comunicación correctamente
+
+                $('footer').animate({
+                    bottom: '-100%'
+                });
+                agreement = 0;
+            }
+
+            if (statusTxt == "error") { //si ha ocurrido un error en la comunicación con PHP lo imprime en consola
+
+                console.log("Se ha producido el siguiente error: " + xhr.status + ": " + xhr.statusText); //indica el tipo de error en la comunicacion AJAX
+
+            }
+
+        });
+
+    });
+    /**************************************************************/
+    // ESTA FUNCION MUESTRA EL MENU DE NAVEGACION DEL HEADER CUANDO LA PANTALLA MIDE MENOS DE 800PX DE ANCHO
+    /**************************************************************/
+    $('.menu_bar').click(function() {
+        // $('nav').toggle(); 
+
+        if (contador == 1) {
+            $('nav').animate({
+                left: '0'
+            });
+            contador = 0;
+        } else {
+            contador = 1;
+            $('nav').animate({
+                left: '-100%'
+            });
+        }
+
+    });
+
+    /**************************************************************/
+    // CARGA LOS EFECTOS VISUALES AL HACER SCROLL EN LA PANTALLA
+    /**************************************************************/
+    $("main.php").ready(function() { // cuando se carge la pantalla principal sin logear, que haga estos efectos
+
+
+        $(".title-main").fadeIn(3000);
+        $(".fadein").fadeIn(3000);
+        $(".users-buttons").fadeIn(3000);
+
+
+        $(window).scroll(function() { //cuando se haga scroll en la pagina web
+
+            var windowHeight = $(window).scrollTop();
+            var contenido2 = $("#subtitulo-principal").offset();
+            var contenido3 = $("#signal-images").offset();
+
+            if (typeof $('#subtitulo-principal').offset() == 'undefined' || typeof $('#signal-images').offset() == 'undefined') {
+
+            } else { // evita que aparezca un error en consola si no nos encontramos en la web principal
+
+                contenido2 = contenido2.top;
+                contenido3 = contenido3.top;
+
+
+                if (windowHeight >= contenido2) {
+
+                    $('.zone-green').animate({
+                        left: '0'
+                    }, 1600);
+                    $('.zone-orange').animate({
+                        left: '0'
+                    }, 1400);
+                    $('.zone-orange2').animate({
+                        left: '0'
+                    }, 700);
+                    $('.zone-blue').animate({
+                        left: '0'
+                    }, 2000);
+                }
+
+                if (windowHeight >= contenido3) {
+
+                    $('#airplanepass').fadeIn(1500);
+                    $('#planet').fadeIn(2500);
+                    $('#creditcard').fadeIn(3500);
+
+                }
+            }
+        });
+    });
+
+
+
+    /**************************************************************/
+    // ESTA FUNCION MUEVE LAS IMAGENES DE LA MOCHILA(TRAVELLER) Y LA CASA(HOME) AL INICIAR SESION, RECORDAR CONTRASEÑA, ETC
+    /**************************************************************/
+
     $("#traveller-option").click(function() {
 
         $("#traveller-icon").animate({ marginTop: 0 }, 50).animate({ marginTop: -35 }, 200).animate({ marginTop: 0 }, 200).animate({ marginTop: -35 }, 200).animate({ marginTop: 0 }, 200);
@@ -16,7 +118,11 @@ $(document).ready(function() {
         $("#owner-icon").animate({ marginTop: 0 }, 50).animate({ marginTop: -50 }, 200).animate({ marginTop: 0 }, 200).animate({ marginTop: -50 }, 200).animate({ marginTop: 0 }, 200);
 
     });
-    //comprueba que las fechas introducidas en el navegador para hacer la reserva son correctas
+
+    /**************************************************************/
+    //ESTA FUNCION COMPRUEBA QUE LAS FECHAS INTRODUCIDAS EN EL NAVEGADOR PARA HACER UNA RESERVA SON POSTERIORES A LA FECHA ACTUAL
+    /**************************************************************/
+
     $(".checks").change(function() {
 
         var checkin = document.getElementById('start').value;
@@ -58,51 +164,14 @@ $(document).ready(function() {
 
         } else {
 
-
-
         }
     });
-    // aparece el menu de navegación del header
-    $('.menu_bar').click(function() {
-        // $('nav').toggle(); 
 
-        if (contador == 1) {
-            $('nav').animate({
-                left: '0'
-            });
-            contador = 0;
-        } else {
-            contador = 1;
-            $('nav').animate({
-                left: '-100%'
-            });
-        }
+    /**************************************************************/
+    // ESTA FUNCION LLAMAR POR AJAX AL ARCHIVO UPDATE_STATES.PHP, QUE SE ENCARGA DE CAMBIAR EL ESTADO DE LAS RESERVAS
+    // PASADAS DE LA FECHA ACTUAL A EXPIRADAS, PARA QUE LOS VIAJEROS PUEDAN REALIZAR COMENTARIOS
+    /**************************************************************/
 
-    });
-
-    // llama a una función para que cree la cookie y hace desaparecer el menu de navegación del footer
-    $('#agreement').click(function() {
-        $("#agreement").load("Model/queries/cookies.php", function(ifCookie, statusTxt, xhr) { //al cargar el rombo, que llame al archivo devolverColor de PHP
-
-            if (statusTxt == "success") { //si se ha realizado la comunicación correctamente
-
-                $('footer').animate({
-                    bottom: '-100%'
-                });
-                agreement = 0;
-            }
-
-            if (statusTxt == "error") { //si ha ocurrido un error en la comunicación con PHP lo imprime en consola
-
-                console.log("Se ha producido el siguiente error: " + xhr.status + ": " + xhr.statusText); //indica el tipo de error en la comunicacion AJAX
-
-            }
-
-        });
-
-    });
-
-    // cada vez que se busque una ciudad, se cambiarán a expiradas las reservas pasadas de fecha
     $("#update-states").click(function() { //al hacer click en el boton
 
         //aqui pasamos la variable randomColor a PHP con ajax
@@ -125,46 +194,4 @@ $(document).ready(function() {
 
     });
 
-});
-$("main.php").ready(function() { // cuando se carge la pantalla principal sin logear, que haga estos efectos
-
-    $(window).scroll(function() { //cuando se haga scroll en la pagina web
-
-        var windowHeight = $(window).scrollTop();
-        var contenido2 = $("#subtitulo-principal").offset();
-        var contenido3 = $("#signal-images").offset();
-
-        if (typeof $('#subtitulo-principal').offset() == 'undefined' || typeof $('#signal-images').offset() == 'undefined') {
-
-        } else { // evita que aparezca un error en consola si no nos encontramos en la web principal
-
-            contenido2 = contenido2.top;
-            contenido3 = contenido3.top;
-
-
-            if (windowHeight >= contenido2) {
-
-                $('.zone-green').animate({
-                    left: '0'
-                }, 1600);
-                $('.zone-orange').animate({
-                    left: '0'
-                }, 1400);
-                $('.zone-orange2').animate({
-                    left: '0'
-                }, 700);
-                $('.zone-blue').animate({
-                    left: '0'
-                }, 2000);
-            }
-
-            if (windowHeight >= contenido3) {
-
-                $('#airplanepass').fadeIn(1500);
-                $('#planet').fadeIn(2500);
-                $('#creditcard').fadeIn(3500);
-
-            }
-        }
-    });
 });

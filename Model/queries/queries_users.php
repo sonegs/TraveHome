@@ -119,72 +119,70 @@ function insertUser() { // le pasamos los valores necesarios para insertar un re
 
     // Validamos la información antes de insertarla
 
-    $errores = array();
-
     if ($nombre && !is_numeric($nombre) && !preg_match("/[0-9]/", $nombre)) {
         $nombre_validado = true;
     } else {
         $nombre_validado = false;
-        $errores['nombre'] = "El campo nombre es inválido";
+        $errores = "El campo nombre es inválido";
     }
     if ($apellidos && !is_numeric($apellidos) && !preg_match("/[0-9]/", $apellidos)) {
         $apellidos_validado = true;
     } else {
         $apellidos_validado = false;
-        $errores['apellidos'] = "El campo apellidos es inválido";
+        $errores = "El campo apellidos es inválido";
     }
     if (!empty($dni)) {
         $dni_validado = true;
     } else {
         $dni_validado = false;
-        $errores['dni'] = "El campo DNI está vacía";
+        $errores = "El campo DNI está vacía";
     }
     if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $email_validado = true;
     } else {
         $email_validado = false;
-        $errores['Email'] = "El campo email es inválido";
+        $errores = "El campo email es inválido";
     }
     if (!empty($contrasena)) {
         $contrasena_validado = true;
     } else {
         $contrasena_validado = false;
-        $errores['contrasena'] = "El campo contraseña está vacía";
+        $errores = "El campo contraseña está vacía";
     }
     if (!empty($direccion)) {
         $direccion_validado = true;
     } else {
         $direccion_validado = false;
-        $errores['direccion'] = "El campo direccion está vacía";
+        $errores = "El campo direccion está vacía";
     }
     if ($cp && is_numeric($cp)) {
         $cp_validado = true;
     } else {
         $cp_validado = false;
-        $errores['cp'] = "El campo Código Postal es inválido";
+        $errores = "El campo Código Postal es inválido";
     }
     if ($ciudad && !is_numeric($ciudad) && !preg_match("/[0-9]/", $ciudad)) {
         $ciudad_validado = true;
     } else {
         $ciudad_validado = false;
-        $errores['ciudad'] = "El campo ciudad es inválido";
+        $errores = "El campo ciudad es inválido";
     }
     if ($pais && !is_numeric($pais) && !preg_match("/[0-9]/", $pais)) {
         $pais_validado = true;
     } else {
         $pais_validado = false;
-        $errores['pais'] = "El campo pais es inválido";
+        $errores = "El campo pais es inválido";
     }
     if ($telefono && is_numeric($telefono)) {
         $telefono_validado = true;
     } else {
         $telefono_validado = false;
-        $errores['telefono'] = "El campo teléfono es inválido";
+        $errores = "El campo teléfono es inválido";
     }
 
     $guardar_usuario = false;
     
-    if(count($errores) == 0) {
+    if(!isset($errores)) {
 
         $guardar_usuario = true;
         $contrasena_segura = password_hash($contrasena, PASSWORD_BCRYPT, ['opciones' => 4]);
@@ -192,8 +190,11 @@ function insertUser() { // le pasamos los valores necesarios para insertar un re
 
     } else {
 
-        echo "<div class='message-login'>Hay algun error en los datos rellenados. Por favor, compruebe que se han introducido correctamente</div>";
-        var_dump($errores);
+        echo "<div class='message-login'>".$errores."</div>";
+        
+        
+        echo "<div class='error-signup'><a href='index.php?nu=03' class='signup-button'>Volver</a></div>";
+        die();
     }
 
     if($usertype == 'traveller'){
@@ -412,16 +413,16 @@ function editUser($dni, $direccion, $cp, $ciudad, $pais, $email, $contrasena, $t
 
             } else {
                 
-                echo "<div class='message-login'>Se ha producido un error en la consulta, ¿ha introducido su DNI correctamente?</div>";
+                echo "<div class='message-login'>Se ha producido un error al modificar sus datos, ¿ha introducido su DNI correctamente?</div>";
 
-                exit();
+                
 
             }
         
     } else {
             
-        echo "<div class='message-login'Se ha producido un error en la consulta, ¿ha introducido sus datos correctamente?</div>";
-        var_dump($con);
+        echo "<div class='message-login'>Se ha producido un error en la consulta, ¿ha introducido sus datos correctamente?</div>";
+        //var_dump($con);
     
         }
 

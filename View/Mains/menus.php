@@ -8,7 +8,7 @@ if(isset($_COOKIE["Copyright"])){
 	
 } else{
 
-    include "View/Mains/personaldetails.php";
+    include "View/Mains/cookiesaccept.php";
     
 }
 
@@ -19,11 +19,12 @@ if(isset($_COOKIE["Copyright"])){
 		switch ( $_GET['nu'] ) {
 
 		case '0':
-		//echo"<script>window.location='index.php'</script>;";
-			header('Location: index.php');
+// en vez de con include o con header, se hace la redirección con javascript para que funcione al subirlo al hosting
+// al hacerlo con PHP, no funciona la redirección en el hosting
+			echo"<script>window.location='index.php'</script>;"; 
 			break;
 		case '1':
-			header('Location: index.php#ciudades');
+			echo"<script>window.location='index.php#ciudades'</script>;";
 			break;
 		case '2':
 			include "View/Sessions/login.php";
@@ -35,7 +36,7 @@ if(isset($_COOKIE["Copyright"])){
 			include "View/Sessions/forget.php";
 			break;
 		default:
-			header('Location: index.php');
+			echo"<script>window.location='index.php'</script>;"; 
 			break;
 			}
 		}
